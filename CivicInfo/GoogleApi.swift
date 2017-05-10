@@ -9,5 +9,5 @@
 import Foundation
 
 struct GoogleApi {
-    static let requestUrl: URL = URL(string: "https://www.googleapis.com/civicinfo/v2/elections?key=AIzaSyCgSLnS6o8BMt_UKccjOqx4zuyKGMX1XRA")!
+    static let requestUrl: URL = URL(string: "https://www.googleapis.com/civicinfo/v2/representatives?key=AIzaSyCgSLnS6o8BMt_UKccjOqx4zuyKGMX1XRA&address=1263%20Pacific%20Ave.%20Kansas%20City%20KS&electionId=2000")!
 }
