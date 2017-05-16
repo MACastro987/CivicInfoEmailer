@@ -47,4 +47,4 @@ class MainPresenter {
 
 ### Motivation
 
-This application is meant to remove barriers between U.S. Representatives and their constituents. Simply scroll through the people who make legislation that directly affects your life. If Google's Civic Info Api provides an email address for the Representative, you may easily compose and send an email.
+This application is meant to remove barriers between U.S. Representatives and their constituents. Scroll through the Representatives who make legislation that directly affects your life. If Google's Civic Info Api provides an email address for the Representative, you may easily compose and send an email.
