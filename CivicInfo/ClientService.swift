@@ -8,10 +8,12 @@
 
 import Foundation
 
-class ClientService {
-    
-    static func requestRepresentatives()
+class ClientService
+{
+    static func requestRepresentatives(completion: @escaping ([Representative]?) -> ())
     {
+        var representatives = [Representative]()
+        
         URLSession.shared.dataTask(with: GoogleApi.requestUrl, completionHandler: {
             (data, response, error) in
             if(error != nil){
@@ -20,12 +22,24 @@ class ClientService {
                 do{
                     let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String : AnyObject]
                     
-                    print(json)
+                    do{
+                        let deserializer = Deserializer(json: json)
+                    
+                        representatives = try deserializer.getRepresentatives()
+                    }
                     
                 }catch let error as NSError{
                     print(error)
                 }
+                
+                completion(representatives)
             }
         }).resume()
     }
 }
+
+
+
+
+
+

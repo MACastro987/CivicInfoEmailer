@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A85FF3B1EC3B27300741395 /* RepresentativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85FF3A1EC3B27300741395 /* RepresentativeView.swift */; };
+		3A5CDA3C1EC3C52700E14EAB /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CDA3B1EC3C52700E14EAB /* MainTableViewCell.swift */; };
+		3A5CDA401EC3C97100E14EAB /* Representative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CDA3F1EC3C97100E14EAB /* Representative.swift */; };
+		3A5CDA431EC3CB0D00E14EAB /* Deserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CDA421EC3CB0D00E14EAB /* Deserializer.swift */; };
+		3A85FF3B1EC3B27300741395 /* RepresentativeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85FF3A1EC3B27300741395 /* RepresentativeViewProtocol.swift */; };
 		3A9BE0891EC0F09A0048E973 /* GoogleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9BE0881EC0F09A0048E973 /* GoogleApi.swift */; };
 		3A9BE08B1EC11D1E0048E973 /* ClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9BE08A1EC11D1E0048E973 /* ClientService.swift */; };
 		3A9BE0911EC11E770048E973 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9BE0901EC11E770048E973 /* MainPresenter.swift */; };
@@ -37,7 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3A85FF3A1EC3B27300741395 /* RepresentativeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepresentativeView.swift; sourceTree = "<group>"; };
+		3A5CDA3B1EC3C52700E14EAB /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		3A5CDA3F1EC3C97100E14EAB /* Representative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Representative.swift; sourceTree = "<group>"; };
+		3A5CDA421EC3CB0D00E14EAB /* Deserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deserializer.swift; sourceTree = "<group>"; };
+		3A85FF3A1EC3B27300741395 /* RepresentativeViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepresentativeViewProtocol.swift; sourceTree = "<group>"; };
 		3A9BE0881EC0F09A0048E973 /* GoogleApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleApi.swift; sourceTree = "<group>"; };
 		3A9BE08A1EC11D1E0048E973 /* ClientService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientService.swift; sourceTree = "<group>"; };
 		3A9BE0901EC11E770048E973 /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
@@ -80,11 +86,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A5CDA411EC3CA1700E14EAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A5CDA3F1EC3C97100E14EAB /* Representative.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		3A9BE08C1EC11D520048E973 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				3A9BE0881EC0F09A0048E973 /* GoogleApi.swift */,
 				3A9BE08A1EC11D1E0048E973 /* ClientService.swift */,
+				3A5CDA421EC3CB0D00E14EAB /* Deserializer.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -112,7 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				3A9BE0931EC1295B0048E973 /* MainViewController.swift */,
-				3A85FF3A1EC3B27300741395 /* RepresentativeView.swift */,
+				3A85FF3A1EC3B27300741395 /* RepresentativeViewProtocol.swift */,
+				3A5CDA3B1EC3C52700E14EAB /* MainTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -150,6 +166,7 @@
 			children = (
 				3A9BE08E1EC11DEA0048E973 /* Application */,
 				3A9BE08D1EC11DA50048E973 /* Storyboard */,
+				3A5CDA411EC3CA1700E14EAB /* Model */,
 				3A9BE08F1EC11E010048E973 /* View */,
 				3A9BE0921EC11E7D0048E973 /* Presenter */,
 				3A9BE08C1EC11D520048E973 /* Service */,
@@ -309,11 +326,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A5CDA401EC3C97100E14EAB /* Representative.swift in Sources */,
 				3A9BE0911EC11E770048E973 /* MainPresenter.swift in Sources */,
 				3AC0B9CD1EA588BA0076BB71 /* AppDelegate.swift in Sources */,
 				3A9BE08B1EC11D1E0048E973 /* ClientService.swift in Sources */,
-				3A85FF3B1EC3B27300741395 /* RepresentativeView.swift in Sources */,
+				3A5CDA3C1EC3C52700E14EAB /* MainTableViewCell.swift in Sources */,
+				3A85FF3B1EC3B27300741395 /* RepresentativeViewProtocol.swift in Sources */,
 				3A9BE0891EC0F09A0048E973 /* GoogleApi.swift in Sources */,
+				3A5CDA431EC3CB0D00E14EAB /* Deserializer.swift in Sources */,
 				3A9BE0941EC1295B0048E973 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

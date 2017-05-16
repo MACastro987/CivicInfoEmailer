@@ -1,5 +1,5 @@
 //
-//  RepresentativeView.swift
+//  Representative.swift
 //  CivicInfo
 //
 //  Created by Michael Castro on 5/10/17.
@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
-protocol RepresentativeView {
-    func showLoadingIndicator()
-    func hideLoadingIndicator()
+public struct Representative
+{    
+    var imageURL: URL?
 }

@@ -8,8 +8,8 @@
 
 import Foundation
 
-class MainPresenter {
-    
+class MainPresenter
+{    
     private var representativeView : RepresentativeView?
     
     func attachView(view: RepresentativeView) {
@@ -22,8 +22,13 @@ class MainPresenter {
     
     func getInitialRepresentatives()
     {
-        ClientService.requestRepresentatives()
-        
-        self.representativeView?.showLoadingIndicator()
+        ClientService.requestRepresentatives(completion: {
+            
+            (representatives : [Representative]?) in
+            
+            if (representatives != nil) {
+                self.representativeView?.update(representatives: representatives!)
+            }
+        })
     }
 }

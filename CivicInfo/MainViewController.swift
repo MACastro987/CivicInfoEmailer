@@ -8,28 +8,15 @@
 
 import UIKit
 
-//todo: remove extensions after testing
-extension CGFloat {
-    static func random() -> CGFloat {
-        return CGFloat(arc4random()) / CGFloat(UInt32.max)
-    }
-}
-
-extension UIColor {
-    static func random() -> UIColor {
-        return UIColor(red:   .random(),
-                       green: .random(),
-                       blue:  .random(),
-                       alpha: 1.0)
-    }
-}
-//end: todo
-
 class MainViewController: UIViewController
 {
     fileprivate var mainPresenter = MainPresenter()
 
     @IBOutlet weak var tableView: UITableView!
+    
+    var Representatives = [Representative]() {
+        didSet { self.reload() }
+    }
     
     override func viewDidLoad()
     {
@@ -59,16 +46,31 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let reuseId = "Cell"
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: reuseId)!
+        
+        let cell: MainTableViewCell = tableView.dequeueReusableCell(withIdentifier: reuseId)! as! MainTableViewCell
 
-        cell.backgroundColor = .random()
-
+        if (Representatives.count != 0) {
+            let index: Int = indexPath.row
+            
+            cell.representative = Representatives[index]
+        }
+        
         return cell
     }
 }
 
 extension MainViewController: RepresentativeView
 {
+    func update(representatives: [Representative]) {
+        Representatives = representatives
+    }
+    
+    func reload() {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
     func showLoadingIndicator() {
         print("showLoadingIndicator()")
     }

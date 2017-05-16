@@ -21,18 +21,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LqI-9C-Jnd">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="122" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LqI-9C-Jnd">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="ohe-Y1-bos">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="122" id="ohe-Y1-bos" customClass="MainTableViewCell" customModule="CivicInfo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="122"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ohe-Y1-bos" id="Jaf-Cb-Lzf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="121"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="cYr-cV-8EY">
+                                                    <rect key="frame" x="0.0" y="-1" width="375" height="122"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cYr-cV-8EY" firstAttribute="height" secondItem="Jaf-Cb-Lzf" secondAttribute="height" id="136-Tg-pNo"/>
+                                                <constraint firstItem="cYr-cV-8EY" firstAttribute="width" secondItem="Jaf-Cb-Lzf" secondAttribute="width" id="6PU-Sm-biR"/>
+                                                <constraint firstItem="cYr-cV-8EY" firstAttribute="centerY" secondItem="Jaf-Cb-Lzf" secondAttribute="centerY" id="XLk-2R-aqm"/>
+                                                <constraint firstItem="cYr-cV-8EY" firstAttribute="centerX" secondItem="Jaf-Cb-Lzf" secondAttribute="centerX" id="g4g-kj-QdD"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="photoView" destination="cYr-cV-8EY" id="ssV-rh-tdL"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -48,4 +62,7 @@
             <point key="canvasLocation" x="-6906.3999999999996" y="-1871.5142428785609"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon" width="72" height="72"/>
+    </resources>
 </document>
