@@ -10,14 +10,14 @@ import Foundation
 
 class MainPresenter
 {    
-    private var representativeView : RepresentativeView?
+    private var mainView : RepresentativeView?
     
     func attachView(view: RepresentativeView) {
-        representativeView = view
+        mainView = view
     }
     
     func detachView() {
-        representativeView = nil
+        mainView = nil
     }
     
     func getInitialRepresentatives()
@@ -27,7 +27,7 @@ class MainPresenter
             (representatives : [Representative]?) in
             
             if (representatives != nil) {
-                self.representativeView?.update(representatives: representatives!)
+                self.mainView?.update(representatives: representatives!)
             }
         })
     }

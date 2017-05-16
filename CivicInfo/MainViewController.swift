@@ -31,15 +31,13 @@ class MainViewController: UIViewController
 }
 
 // MARK: - Table view data source
-extension MainViewController: UITableViewDelegate, UITableViewDataSource {
-
-    
+extension MainViewController: UITableViewDelegate, UITableViewDataSource
+{
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 6
     }
     

@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-public struct Representative
-{    
+public struct Representative {    
     var imageURL: URL?
 }

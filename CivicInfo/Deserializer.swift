@@ -12,18 +12,14 @@ import UIKit
 public struct Deserializer {
     
     var JSON: [String: Any]
-    
     var Representatives: [Representative]?
-    
     
     init(json: [String : Any]) {
         JSON = json
     }
     
     enum DeserializationError: Error {
-        case invalid(String)
         case missing(String)
-        case assignment(String)
     }
     
     func getRepresentatives() throws -> [Representative]
@@ -31,9 +27,7 @@ public struct Deserializer {
         var repArray = [Representative]()
         
         guard let officials = JSON["officials"] as? [[String: Any]] else { throw DeserializationError.missing("Key 'officials' not found") }
-        
-        print(officials)
-        
+                
         for official in officials
         {
             var representative = Representative()

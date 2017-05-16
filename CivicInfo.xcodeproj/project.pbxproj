@@ -10,6 +10,7 @@
 		3A5CDA3C1EC3C52700E14EAB /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CDA3B1EC3C52700E14EAB /* MainTableViewCell.swift */; };
 		3A5CDA401EC3C97100E14EAB /* Representative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CDA3F1EC3C97100E14EAB /* Representative.swift */; };
 		3A5CDA431EC3CB0D00E14EAB /* Deserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CDA421EC3CB0D00E14EAB /* Deserializer.swift */; };
+		3A6BEF9E1ECABDD7009E98AE /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6BEF9D1ECABDD7009E98AE /* MainPresenterTest.swift */; };
 		3A85FF3B1EC3B27300741395 /* RepresentativeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85FF3A1EC3B27300741395 /* RepresentativeViewProtocol.swift */; };
 		3A9BE0891EC0F09A0048E973 /* GoogleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9BE0881EC0F09A0048E973 /* GoogleApi.swift */; };
 		3A9BE08B1EC11D1E0048E973 /* ClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9BE08A1EC11D1E0048E973 /* ClientService.swift */; };
@@ -43,6 +44,7 @@
 		3A5CDA3B1EC3C52700E14EAB /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		3A5CDA3F1EC3C97100E14EAB /* Representative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Representative.swift; sourceTree = "<group>"; };
 		3A5CDA421EC3CB0D00E14EAB /* Deserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deserializer.swift; sourceTree = "<group>"; };
+		3A6BEF9D1ECABDD7009E98AE /* MainPresenterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
 		3A85FF3A1EC3B27300741395 /* RepresentativeViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepresentativeViewProtocol.swift; sourceTree = "<group>"; };
 		3A9BE0881EC0F09A0048E973 /* GoogleApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleApi.swift; sourceTree = "<group>"; };
 		3A9BE08A1EC11D1E0048E973 /* ClientService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientService.swift; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 				3A5CDA3F1EC3C97100E14EAB /* Representative.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		3A6BEFA61ECB777E009E98AE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3A6BEF9D1ECABDD7009E98AE /* MainPresenterTest.swift */,
+			);
+			name = Presenter;
 			sourceTree = "<group>";
 		};
 		3A9BE08C1EC11D520048E973 /* Service */ = {
@@ -178,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				3AC0B9E31EA588C00076BB71 /* Info.plist */,
+				3A6BEFA61ECB777E009E98AE /* Presenter */,
 			);
 			path = CivicInfoTests;
 			sourceTree = "<group>";
@@ -264,6 +275,7 @@
 					};
 					3AC0B9DC1EA588BD0076BB71 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3AC0B9C81EA588B80076BB71;
 					};
@@ -342,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A6BEF9E1ECABDD7009E98AE /* MainPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,10 +515,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CivicInfoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gov.michaelcastro.CivicInfoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CivicInfo.app/CivicInfo";
 			};
@@ -516,6 +531,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CivicInfoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gov.michaelcastro.CivicInfoTests;

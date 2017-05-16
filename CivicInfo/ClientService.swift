@@ -22,13 +22,13 @@ class ClientService
                 do{
                     let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String : AnyObject]
                     
-                    do{
-                        let deserializer = Deserializer(json: json)
+                    //print(json)
                     
-                        representatives = try deserializer.getRepresentatives()
-                    }
+                    let deserializer = Deserializer(json: json)
+                
+                    representatives = try deserializer.getRepresentatives()
                     
-                }catch let error as NSError{
+                } catch let error as NSError{
                     print(error)
                 }
                 
