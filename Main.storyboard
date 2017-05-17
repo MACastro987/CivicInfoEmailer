@@ -30,10 +30,10 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="122"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ohe-Y1-bos" id="Jaf-Cb-Lzf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="121"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="122"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="cYr-cV-8EY">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cYr-cV-8EY">
                                                     <rect key="frame" x="0.0" y="-1" width="375" height="122"/>
                                                 </imageView>
                                             </subviews>
@@ -62,7 +62,4 @@
             <point key="canvasLocation" x="-6906.3999999999996" y="-1871.5142428785609"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="icon" width="72" height="72"/>
-    </resources>
 </document>

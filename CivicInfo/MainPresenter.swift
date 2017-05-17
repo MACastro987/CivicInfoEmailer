@@ -7,10 +7,19 @@
 //
 
 import Foundation
+import CoreLocation
 
 class MainPresenter
-{    
-    private var mainView : RepresentativeView?
+{
+    public var address: CLPlacemark? {
+        didSet {
+            printPlacemark(placemark: address!)
+        }
+    }
+    
+    private let locationProxy = LocationProxy()
+    
+    private var mainView: RepresentativeView?
     
     func attachView(view: RepresentativeView) {
         mainView = view
@@ -20,8 +29,17 @@ class MainPresenter
         mainView = nil
     }
     
-    func getInitialRepresentatives()
-    {
+    func getAddress() {
+        locationProxy.presenter = self
+        locationProxy.enableLocationManager()
+    }
+    
+    func printPlacemark(placemark: CLPlacemark) {
+        print(placemark)
+    }
+    
+    func getInitialRepresentatives() {
+        
         ClientService.requestRepresentatives(completion: {
             
             (representatives : [Representative]?) in
@@ -32,3 +50,4 @@ class MainPresenter
         })
     }
 }
+

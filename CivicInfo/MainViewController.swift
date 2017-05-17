@@ -23,6 +23,9 @@ class MainViewController: UIViewController
         super.viewDidLoad()
         
         mainPresenter.attachView(view: self)
+        
+        //mainPresenter.getAddress()
+        
         mainPresenter.getInitialRepresentatives()
         
         tableView.delegate = self

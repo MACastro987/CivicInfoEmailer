@@ -11,7 +11,7 @@ import XCTest
 
 class MainPresenterTest: XCTestCase {
         
-    func testViewUpdateFromPresenter () {
+    func test_ViewDoesUpdateFromPresenter() {
         //given
         let mockMainView = MockMainView()
         let mockMainPresenter = MainPresenter()

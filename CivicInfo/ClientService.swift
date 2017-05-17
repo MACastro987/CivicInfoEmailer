@@ -22,7 +22,7 @@ class ClientService
                 do{
                     let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String : AnyObject]
                     
-                    //print(json)
+                    print(json)
                     
                     let deserializer = Deserializer(json: json)
                 
