@@ -13,7 +13,7 @@ class MainPresenter
 {
     public var address: CLPlacemark? {
         didSet {
-            printPlacemark(placemark: address!)
+            createRequest(placemark: address!)
         }
     }
     
@@ -34,11 +34,16 @@ class MainPresenter
         locationProxy.enableLocationManager()
     }
     
-    func printPlacemark(placemark: CLPlacemark) {
-        print(placemark)
+    func createRequest(placemark: CLPlacemark) {
+        do {
+            requestRepresentatives(for: try Address(placemark: placemark))
+            
+        } catch {
+            print("Unable to initialize address")
+        }
     }
     
-    func getInitialRepresentatives() {
+    func requestRepresentatives(for address: Address) {
         
         ClientService.requestRepresentatives(completion: {
             

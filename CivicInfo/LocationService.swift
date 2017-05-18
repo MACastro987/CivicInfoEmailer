@@ -29,6 +29,7 @@ class LocationProxy: NSObject, CLLocationManagerDelegate {
     
     func disableLocationManager() {
         locationManager.stopUpdatingLocation()
+        locationManager.delegate = nil
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -42,38 +43,11 @@ class LocationProxy: NSObject, CLLocationManagerDelegate {
                 return
             }
             
-            if placemarks?.count != 0 {
-                let userLocation = placemarks?.first!
-                
-                let state = userLocation?.administrativeArea
-                
-                print(state ?? "No value for STATE")
-                
-                let city = userLocation?.locality
-                
-                print(city ?? "No value or CITY")
-                
-                let streetAddress = userLocation?.thoroughfare
-                
-                print(streetAddress ?? "No value for STREETADRESS")
-                
-                let streetNumber = userLocation?.subLocality
-                
-                print(streetNumber ?? "No value for STREETNUMBER")
-                
-                
-                
-                //Pass address to presenter
-                //self.passAddress(placemark: pm!)
-                
-            } else {
-                print("Problem with the data received from geocoder")
+            if let placemark = placemarks?.first {
+                //Pass the placemark back to the presenter
+                self.presenter?.address = placemark
             }
         })
-    }
-    
-    func passAddress(placemark: CLPlacemark) {
-        presenter?.address = placemark
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

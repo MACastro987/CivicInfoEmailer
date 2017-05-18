@@ -11,4 +11,8 @@ import UIKit
 
 public struct Representative {    
     var imageURL: URL?
+    
+    static func request(for address: Address, completion: @escaping ([Representative]) -> ()) {
+        
+    }
 }
