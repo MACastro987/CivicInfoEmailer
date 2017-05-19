@@ -10,36 +10,43 @@ import Foundation
 import CoreLocation
 
 struct Address {
-    var url: URL?
+    var url: URL? {
+        didSet {
+            if (url != nil) {
+                print("Yea!")
+                //tell presenter to request representatives
+            }
+        }
+    }
     
     enum SerializationError: Error {
         case missing(String)
-        case invalid(String)
     }
     
-    init(placemark: CLPlacemark) throws {
+    init(placemark: CLPlacemark) {
         
-        //extract address string components from placemark
-        guard let state = placemark.administrativeArea else { throw SerializationError.missing("No value for state")
+        if let state = placemark.administrativeArea,
+            let locality = placemark.locality,
+            let name = placemark.name {
+            
+            //create URL from string components
+            let base:String = "https://www.googleapis.com/civicinfo/v2/representatives?:"
+            let key:String = "key=AIzaSyCgSLnS6o8BMt_UKccjOqx4zuyKGMX1XRA"
+            let apnd = "%20"
+            let stringBuilder: String = base + key + "&address=" + name + apnd + locality + apnd + state
+            
+            
+            let formattedString: String = stringBuilder.replacingOccurrences(of: " ",
+                                                                             with: "%20",
+                                                                             options: .regularExpression)
+            
+            print("\nformattedString: \(formattedString)")
+            
+            setURL(newValue: formattedString)
         }
-        
-        guard let locality = placemark.locality else { throw SerializationError.missing("No value for state")
-        }
-        
-        guard let name = placemark.name else { throw SerializationError.missing("No value for name")
-        }
-        
-        //create URL from string components
-        let apnd = "%20"
-        let rawString = name + apnd + locality + apnd + state
-        
-        
-        let formattedString = rawString.replacingOccurrences(of: " ",
-                                                             with: "%20",
-                                                             options: .regularExpression)
-        
-        print(formattedString)
-        
-        url = URL(string: formattedString)
+    }
+    
+    mutating func setURL(newValue: String) {
+        self.url = URL(string: newValue)
     }
 }

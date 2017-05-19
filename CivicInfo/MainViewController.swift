@@ -25,11 +25,13 @@ class MainViewController: UIViewController
         mainPresenter.attachView(view: self)
         
         mainPresenter.getAddress()
-        
-        //mainPresenter.getInitialRepresentatives()
-        
+                
         tableView.delegate = self
         tableView.dataSource = self as UITableViewDataSource
+    }
+    
+    override func didReceiveMemoryWarning() {
+        //mainPresenter.flushCache()
     }
 }
 

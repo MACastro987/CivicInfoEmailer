@@ -8,33 +8,60 @@
 
 import Foundation
 
-class ClientService
-{
-    static func requestRepresentatives(completion: @escaping ([Representative]?) -> ())
+struct ClientService {
+    
+    enum DeserializationError: Error {
+        case missing(String)
+    }
+    
+    static func requestRepresentatives(for address: Address, completion: @escaping ([Representative]?) -> ())
     {
         var representatives = [Representative]()
         
-        URLSession.shared.dataTask(with: GoogleApi.requestUrl, completionHandler: {
-            (data, response, error) in
-            if(error != nil){
-                print("error")
-            }else{
-                do{
-                    let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String : AnyObject]
+        print(address)
+        
+        if (address.url != nil) {
+            
+            URLSession.shared.dataTask(with: address.url!, completionHandler: {
+                (data, response, error) in
+                if(error != nil){
+                    print("error")
+                }else{
+                    do{
+                        let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String : AnyObject]
+                        
+                        print(json)
+                        
+                        representatives = self.deserialize(json: json)
+                        
+                    } catch let error as NSError{
+                        print(error)
+                    }
                     
-                    print(json)
-                    
-                    let deserializer = Deserializer(json: json)
-                
-                    representatives = try deserializer.getRepresentatives()
-                    
-                } catch let error as NSError{
-                    print(error)
+                    completion(representatives)
                 }
-                
-                completion(representatives)
+            }).resume()
+        }
+    }
+    
+    static func deserialize(json: [String: AnyObject]) -> [Representative]
+    {
+        var repArray = [Representative]()
+        
+        if let officials = json["officials"] as? [[String: Any]] {
+        
+            for official in officials
+            {
+                if let imageString  = official["photoUrl"] as? String {
+                    
+                    let representative = Representative(imageURL: URL(string: imageString))
+                    
+                    repArray.append(representative)
+                }
             }
-        }).resume()
+        }
+        
+        return repArray
     }
 }
 

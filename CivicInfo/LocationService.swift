@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation
 
-class LocationProxy: NSObject, CLLocationManagerDelegate {
+class LocationService: NSObject, CLLocationManagerDelegate {
     
     var locationManager = CLLocationManager()
     
@@ -45,7 +45,7 @@ class LocationProxy: NSObject, CLLocationManagerDelegate {
             
             if let placemark = placemarks?.first {
                 //Pass the placemark back to the presenter
-                self.presenter?.address = placemark
+                self.presenter?.placemark = placemark
             }
         })
     }
