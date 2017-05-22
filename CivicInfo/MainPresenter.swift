@@ -27,7 +27,25 @@ class MainPresenter
     
     private var address: Address? {
         didSet {
-//            requestRepresentatives(for: address!)
+            //PRODUCTION
+//            ClientService.requestRepresentatives(for: address!, completion: {
+//                
+//                (representatives : [Representative]?) in
+//                
+//                if (representatives != nil) {
+//                    self.mainView?.update(representatives: representatives!)
+//                }
+//            })
+            
+            //TEST
+            ClientService.testRequest(completion: {
+                
+                (representatives: [Representative]?) in
+                
+                if (representatives != nil) {
+                    self.mainView?.update(representatives: representatives!)
+                }
+            })
         }
     }
     
@@ -44,18 +62,50 @@ class MainPresenter
         locationService?.updateLocation()
     }
     
-    func requestRepresentatives(for address: Address) {
-        
-        print(address)
-        
-        ClientService.requestRepresentatives(for: address, completion: {
-            
-            (representatives : [Representative]?) in
-            
-            if (representatives != nil) {
-                self.mainView?.update(representatives: representatives!)
-            }
-        })
-    }
+//    func requestRepresentatives(for address: Address) {
+//        
+//        print(address)
+//        
+//        ClientService.requestRepresentatives(for: address, completion: {
+//            
+//            (representatives : [Representative]?) in
+//            
+//            if (representatives != nil) {
+//                self.mainView?.update(representatives: representatives!)
+//            }
+//        })
+//    }
+    
+//    func representativesFromSampleJSON() {
+//        guard let path = Bundle.main.path(forResource: "SampleJSON", ofType: "txt")
+//            else { return }
+//        let url = URL(fileURLWithPath: path)
+//        do {
+//            let data = try Data(contentsOf: url)
+//            let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+//            print(json)
+//        } catch {
+//            print(error)
+//        }
+//    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

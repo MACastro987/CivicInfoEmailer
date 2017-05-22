@@ -14,6 +14,26 @@ struct ClientService {
         case missing(String)
     }
     
+    static func testRequest(completion: @escaping ([Representative]?) -> ()) {
+        var representatives = [Representative]()
+        
+        guard let path = Bundle.main.path(forResource: "SampleJSON", ofType: "txt")
+            else { return }
+        let url = URL(fileURLWithPath: path)
+        do {
+            let data = try Data(contentsOf: url)
+            let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String : AnyObject]
+            print(json)
+            representatives = self.deserialize(json: json)
+            
+        } catch {
+            print(error)
+        }
+        
+        completion(representatives)
+
+    }
+    
     static func requestRepresentatives(for address: Address, completion: @escaping ([Representative]?) -> ())
     {
         var representatives = [Representative]()
@@ -35,6 +55,8 @@ struct ClientService {
                         
                         representatives = self.deserialize(json: json)
                         
+                        print(representatives)
+                        
                     } catch let error as NSError{
                         print(error)
                     }
@@ -42,7 +64,9 @@ struct ClientService {
                     completion(representatives)
                 }
             }).resume()
-        } else {
+        }
+        
+        else {
             print("Address.url not available")
         }
     }
