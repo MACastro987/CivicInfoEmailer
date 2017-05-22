@@ -10,13 +10,8 @@ import Foundation
 import UIKit
 
 public struct Representative {
-    var imageURL: URL?
-    
-//    static func request(for address: Address, completion: @escaping ([Representative]) -> ()) {
-//        
-//    }
-    
-    init(imageURL: URL?) {
-        self.imageURL = imageURL
-    }
+    public var name: String?
+    public var imageURL: URL?
+    public var email: [String]?
+    public var phone: [String]?
 }

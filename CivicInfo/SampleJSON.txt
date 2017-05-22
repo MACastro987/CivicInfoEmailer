@@ -4,16 +4,43 @@
 
 "party": "Independant",
 
-"photoUrl": "http://1.bp.blogspot.com/-vhpjJuxDaPE/VbmEAoW3jVI/AAAAAAAAOs4/ZoQX_s2j6qM/s1600/IMG_0002.jpg",
+"photoUrl": "http://i0.kym-cdn.com/photos/images/facebook/000/288/632/0bb.jpg",
+
+"phones": ["(417) 693-9263"]
+},
+
+{
+"name": "Donald J. Trump",
+
+"party": "Republican",
+
+"photoUrl": "https://www.whitehouse.gov/sites/whitehouse.gov/files/images/45/PE%20Color.jpg",
+
+"phones": [ "(202) 456-1111" , "(410) 937-5647" ]
 
 },
 
 {
-"name": "Azizi Castro",
+"name": "Mike Pence",
 
-"party": "Democat",
+"party": "Republican",
 
-"photoUrl": "http://ecdn.funzypics.com/grumpycatmemes/pics/16/Garfield-Like-Kitty-Having-A-Lazy-Time-Very-Cute-Nice-Cat-Picture.jpg",
+"photoUrl": "https://www.whitehouse.gov/sites/whitehouse.gov/files/images/45/VPE%20Color.jpg",
+
+"phones": [ "(202) 456-1111" ]
+
+},
+
+{
+"name": "Pat Pettey",
+
+"party": "Democratic",
+
+"photoUrl": "http://www.kslegislature.org/li/m/images/pics/sen_pettey_pat_1.jpg",
+
+"phones": [ "(785) 296-7375" ],
+
+"emails": [ "Pat.Petty@senate.ks.gov" ]
 
 }
 ]}

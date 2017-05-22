@@ -12,6 +12,7 @@ struct ClientService {
     
     enum DeserializationError: Error {
         case missing(String)
+        case invalid(String)
     }
     
     static func testRequest(completion: @escaping ([Representative]?) -> ()) {
@@ -22,16 +23,18 @@ struct ClientService {
         let url = URL(fileURLWithPath: path)
         do {
             let data = try Data(contentsOf: url)
+            
             let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String : AnyObject]
+            
             print(json)
-            representatives = self.deserialize(json: json)
+            
+            representatives = try self.deserialize(json: json)
             
         } catch {
             print(error)
         }
         
         completion(representatives)
-
     }
     
     static func requestRepresentatives(for address: Address, completion: @escaping ([Representative]?) -> ())
@@ -53,7 +56,7 @@ struct ClientService {
                         
                         print(json)
                         
-                        representatives = self.deserialize(json: json)
+                        representatives = try self.deserialize(json: json)
                         
                         print(representatives)
                         
@@ -71,7 +74,7 @@ struct ClientService {
         }
     }
     
-    static func deserialize(json: [String: AnyObject]) -> [Representative]
+    static func deserialize(json: [String: AnyObject]) throws -> [Representative]
     {
         var repArray = [Representative]()
         
@@ -79,12 +82,27 @@ struct ClientService {
         
             for official in officials
             {
-                if let imageString  = official["photoUrl"] as? String {
-                    
-                    let representative = Representative(imageURL: URL(string: imageString))
-                    
-                    repArray.append(representative)
+                var representative = Representative()
+                
+                if let name = official["name"] as? String {
+                    representative.name = name
                 }
+                
+                if let imageUrlString = official["photoUrl"] as? String {
+                    if let imageUrl = URL(string: imageUrlString) {
+                        representative.imageURL = imageUrl
+                    }
+                }
+                
+                if let phone = official["phones"] as? [String] {
+                    representative.phone = phone
+                }
+                
+                if let email = official["email"] as? [String] {
+                    representative.email = email
+                }
+                
+                repArray.append(representative)
             }
         }
         

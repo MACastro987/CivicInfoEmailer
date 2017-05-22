@@ -46,6 +46,7 @@ class LocationService: NSObject, CLLocationManagerDelegate {
             }
             
             if let placemark = placemarks?.first {
+                
                 //Pass the placemark back to the presenter
                 self.presenter?.placemark = placemark
             }
