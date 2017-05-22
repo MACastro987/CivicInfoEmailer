@@ -33,6 +33,17 @@ class MainViewController: UIViewController
     override func didReceiveMemoryWarning() {
         //mainPresenter.flushCache()
     }
+    
+    let detailSegue = "contactSegue"
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if  segue.identifier == detailSegue,
+            let contactView = segue.destination as? ContactViewController,
+            let index = tableView.indexPathForSelectedRow?.row
+        {
+            contactView.representative = Representatives[index]
+        }
+    }
 }
 
 // MARK: - Table view data source
@@ -59,6 +70,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource
         }
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
