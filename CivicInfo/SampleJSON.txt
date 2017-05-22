@@ -6,6 +6,8 @@
 
 "photoUrl": "http://i0.kym-cdn.com/photos/images/facebook/000/288/632/0bb.jpg",
 
+"email": ["castro.michael87@gmail.com"],
+
 "phones": ["(417) 693-9263"]
 },
 

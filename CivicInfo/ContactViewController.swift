@@ -21,7 +21,19 @@ class ContactViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if representative?.name != nil {
+            nameLabel.text = representative?.name
+        }
+        
+        if representative?.email != nil {
+            emailAddressField.text = representative?.email?.first
+        } else {
+            emailAddressField.text = "Sorry, no email addres provided"
+        }
+        
+        if representative?.phone != nil {
+            phoneNumberLabel.text = representative?.phone?.first
+        }
     }
 
     override func didReceiveMemoryWarning() {
