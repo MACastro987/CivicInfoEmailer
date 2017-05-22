@@ -21,6 +21,8 @@
 		3AC0B9D71EA588BC0076BB71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AC0B9D51EA588BC0076BB71 /* LaunchScreen.storyboard */; };
 		3AC0B9ED1EA588C10076BB71 /* CivicInfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC0B9EC1EA588C10076BB71 /* CivicInfoUITests.swift */; };
 		3AC0B9FB1EA6A76E0076BB71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AC0B9FA1EA6A76E0076BB71 /* Main.storyboard */; };
+		3AD584751ED33757009D4A0C /* SampleJSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AD584741ED33757009D4A0C /* SampleJSON.txt */; };
+		3AD584771ED3386C009D4A0C /* AddressTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD584761ED3386C009D4A0C /* AddressTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		3AC0B9EC1EA588C10076BB71 /* CivicInfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CivicInfoUITests.swift; sourceTree = "<group>"; };
 		3AC0B9EE1EA588C10076BB71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AC0B9FA1EA6A76E0076BB71 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
+		3AD584741ED33757009D4A0C /* SampleJSON.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleJSON.txt; sourceTree = "<group>"; };
+		3AD584761ED3386C009D4A0C /* AddressTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,7 @@
 		3AC0B9CB1EA588B90076BB71 /* CivicInfo */ = {
 			isa = PBXGroup;
 			children = (
+				3AD584741ED33757009D4A0C /* SampleJSON.txt */,
 				3A9BE08E1EC11DEA0048E973 /* Application */,
 				3A9BE08D1EC11DA50048E973 /* Storyboard */,
 				3A5CDA411EC3CA1700E14EAB /* Model */,
@@ -188,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				3AC0B9E31EA588C00076BB71 /* Info.plist */,
+				3AD584781ED33872009D4A0C /* Model */,
 				3A6BEFA61ECB777E009E98AE /* Presenter */,
 			);
 			path = CivicInfoTests;
@@ -200,6 +206,14 @@
 				3AC0B9EE1EA588C10076BB71 /* Info.plist */,
 			);
 			path = CivicInfoUITests;
+			sourceTree = "<group>";
+		};
+		3AD584781ED33872009D4A0C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3AD584761ED3386C009D4A0C /* AddressTest.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AD584751ED33757009D4A0C /* SampleJSON.txt in Resources */,
 				3AC0B9D71EA588BC0076BB71 /* LaunchScreen.storyboard in Resources */,
 				3AC0B9D41EA588BC0076BB71 /* Assets.xcassets in Resources */,
 				3AC0B9FB1EA6A76E0076BB71 /* Main.storyboard in Resources */,
@@ -354,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AD584771ED3386C009D4A0C /* AddressTest.swift in Sources */,
 				3A6BEF9E1ECABDD7009E98AE /* MainPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

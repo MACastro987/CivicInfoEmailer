@@ -18,16 +18,17 @@ struct ClientService {
     {
         var representatives = [Representative]()
         
-        print(address)
-        
-        if (address.url != nil) {
+        if let url = address.url() {
             
-            URLSession.shared.dataTask(with: address.url!, completionHandler: {
+            URLSession.shared.dataTask(with: url, completionHandler: {
                 (data, response, error) in
-                if(error != nil){
+                
+                if(error != nil) {
                     print("error")
-                }else{
-                    do{
+                }
+                    
+                else {
+                    do {
                         let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String : AnyObject]
                         
                         print(json)
@@ -41,6 +42,8 @@ struct ClientService {
                     completion(representatives)
                 }
             }).resume()
+        } else {
+            print("Address.url not available")
         }
     }
     

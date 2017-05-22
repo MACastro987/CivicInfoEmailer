@@ -24,8 +24,8 @@ class MainViewController: UIViewController
         
         mainPresenter.attachView(view: self)
         
-        mainPresenter.getAddress()
-                
+        mainPresenter.updateLocation()
+        
         tableView.delegate = self
         tableView.dataSource = self as UITableViewDataSource
     }

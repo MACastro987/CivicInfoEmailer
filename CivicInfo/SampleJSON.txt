@@ -1,0 +1,848 @@
+["officials": <__NSArrayI 0x170174280>(
+{
+    address =     (
+                {
+            city = Washington;
+            line1 = "The White House";
+            line2 = "1600 Pennsylvania Avenue NW";
+            state = DC;
+            zip = 20500;
+        }
+    );
+    channels =     (
+                {
+            id = "+whitehouse";
+            type = GooglePlus;
+        },
+                {
+            id = whitehouse;
+            type = Facebook;
+        },
+                {
+            id = potus;
+            type = Twitter;
+        },
+                {
+            id = whitehouse;
+            type = YouTube;
+        }
+    );
+    name = "Donald J. Trump";
+    party = Republican;
+    phones =     (
+        "(202) 456-1111"
+    );
+    photoUrl = "https://www.whitehouse.gov/sites/whitehouse.gov/files/images/45/PE%20Color.jpg";
+    urls =     (
+        "http://www.whitehouse.gov/"
+    );
+},
+{
+    address =     (
+                {
+            city = Washington;
+            line1 = "The White House";
+            line2 = "1600 Pennsylvania Avenue NW";
+            state = DC;
+            zip = 20500;
+        }
+    );
+    channels =     (
+                {
+            id = "+whitehouse";
+            type = GooglePlus;
+        },
+                {
+            id = whitehouse;
+            type = Facebook;
+        },
+                {
+            id = VP;
+            type = Twitter;
+        }
+    );
+    name = "Mike Pence";
+    party = Republican;
+    phones =     (
+        "(202) 456-1111"
+    );
+    photoUrl = "https://www.whitehouse.gov/sites/whitehouse.gov/files/images/45/VPE%20Color.jpg";
+    urls =     (
+        "http://www.whitehouse.gov/"
+    );
+},
+{
+    address =     (
+                {
+            city = Washington;
+            line1 = "521 Dirksen Senate Office Building";
+            state = DC;
+            zip = 20510;
+        }
+    );
+    channels =     (
+                {
+            id = jerrymoran;
+            type = Facebook;
+        },
+                {
+            id = JerryMoran;
+            type = Twitter;
+        },
+                {
+            id = SenatorJerryMoran;
+            type = YouTube;
+        }
+    );
+    name = "Jerry Moran";
+    party = Republican;
+    phones =     (
+        "(202) 224-6521"
+    );
+    photoUrl = "http://bioguide.congress.gov/bioguide/photo/M/M000934.jpg";
+    urls =     (
+        "http://www.moran.senate.gov/public/"
+    );
+},
+{
+    address =     (
+                {
+            city = Washington;
+            line1 = "109 Hart Senate Office Building";
+            state = DC;
+            zip = 20510;
+        }
+    );
+    channels =     (
+                {
+            id = SenPatRoberts;
+            type = Facebook;
+        },
+                {
+            id = SenPatRoberts;
+            type = Twitter;
+        },
+                {
+            id = SenPatRoberts;
+            type = YouTube;
+        }
+    );
+    name = "Pat Roberts";
+    party = Republican;
+    phones =     (
+        "(202) 224-4774"
+    );
+    photoUrl = "http://bioguide.congress.gov/bioguide/photo/R/R000307.jpg";
+    urls =     (
+        "http://www.roberts.senate.gov/public/"
+    );
+},
+{
+    address =     (
+                {
+            city = Washington;
+            line1 = "2433 Rayburn House Office Building";
+            state = DC;
+            zip = 20515;
+        }
+    );
+    channels =     (
+                {
+            id = CongressmanKevinYoder;
+            type = Facebook;
+        },
+                {
+            id = RepKevinYoder;
+            type = Twitter;
+        },
+                {
+            id = RepYoder;
+            type = YouTube;
+        }
+    );
+    name = "Kevin Yoder";
+    party = Republican;
+    phones =     (
+        "(202) 225-2865"
+    );
+    photoUrl = "http://yoder.house.gov/sites/yoder.house.gov/files/wysiwyg_uploaded/KYPortrait.PNG";
+    urls =     (
+        "http://yoder.house.gov/"
+    );
+},
+{
+    address =     (
+                {
+            city = Topeka;
+            line1 = Capitol;
+            line2 = "300 SW 10th Ave.,";
+            state = KS;
+            zip = 66612;
+        }
+    );
+    channels =     (
+                {
+            id = govsambrownback;
+            type = Facebook;
+        },
+                {
+            id = govsambrownback;
+            type = Twitter;
+        },
+                {
+            id = govsambrownback;
+            type = YouTube;
+        }
+    );
+    name = "Sam Brownback";
+    party = Republican;
+    phones =     (
+        "(785) 296-3232"
+    );
+    photoUrl = "https://governor.kansas.gov/wp-content/uploads/2016/11/Gov-Brownback.jpg";
+    urls =     (
+        "http://www.governor.ks.gov/"
+    );
+},
+{
+    address =     (
+                {
+            city = Topeka;
+            line1 = "State Capitol";
+            line2 = "2nd Floor";
+            line3 = "300 SW 10th Ave.";
+            state = KS;
+            zip = 66612;
+        }
+    );
+    channels =     (
+                {
+            id = DrJeffColyer;
+            type = Twitter;
+        },
+                {
+            id = DrJeffColyer;
+            type = Facebook;
+        }
+    );
+    name = "Jeff Colyer";
+    party = Republican;
+    phones =     (
+        "(785) 296-2214"
+    );
+    photoUrl = "https://governor.kansas.gov/wp-content/uploads/2016/11/Colyer-bio-image.jpg";
+    urls =     (
+        "https://governor.kansas.gov/about-the-office/lt-governor-jeff-colyer-m-d/"
+    );
+},
+{
+    address =     (
+                {
+            city = "";
+            line1 = 66612;
+            line2 = "300 SW 10TH AVE";
+            state = KS;
+            zip = "";
+        }
+    );
+    channels =     (
+                {
+            id = PatHPettey;
+            type = Twitter;
+        },
+                {
+            id = PetteyForSenate;
+            type = Facebook;
+        }
+    );
+    emails =     (
+        "Pat.Pettey@senate.ks.gov"
+    );
+    name = "Pat Pettey";
+    party = Democratic;
+    phones =     (
+        "(785) 296-7375"
+    );
+    photoUrl = "http://www.kslegislature.org/li/m/images/pics/sen_pettey_pat_1.jpg";
+    urls =     (
+        "http://www.kslegislature.org/li/b2015_16/members/sen_pettey_pat_1/"
+    );
+},
+{
+    address =     (
+                {
+            city = Topeka;
+            line1 = "300 SW 10TH AVE STE 359-W";
+            state = KS;
+            zip = 66612;
+        }
+    );
+    emails =     (
+        "louis.ruiz@house.ks.gov"
+    );
+    name = "Louis Ruiz";
+    party = Democratic;
+    phones =     (
+        "(785) 296-7630"
+    );
+    photoUrl = "http://www.kslegislature.org/li/m/images/pics/rep_ruiz_louis_1.jpg";
+    urls =     (
+        "http://www.kslegislature.org/li/b2015_16/members/rep_ruiz_louis_1/"
+    );
+},
+{
+    address =     (
+                {
+            city = Topeka;
+            line1 = "Kansas State Treasurer 900 SW Jackson";
+            line2 = "Suite 201";
+            state = KS;
+            zip = 66612;
+        }
+    );
+    channels =     (
+                {
+            id = 130975650300043;
+            type = Facebook;
+        },
+                {
+            id = RonEstesKS;
+            type = Twitter;
+        }
+    );
+    emails =     (
+        "ron@treasurer.ks.gov"
+    );
+    name = "Ron Estes";
+    party = Republican;
+    phones =     (
+        "(785) 296-3171"
+    );
+},
+{
+    address =     (
+                {
+            city = Topeka;
+            line1 = "120 SW 10th Ave";
+            line2 = "2nd Floor";
+            state = KS;
+            zip = 66612;
+        }
+    );
+    channels =     (
+                {
+            id = KSAGOffice;
+            type = Twitter;
+        }
+    );
+    name = "Derek Schmidt";
+    party = Republican;
+    phones =     (
+        "(785) 296-2215"
+    );
+    urls =     (
+        "http://ag.ks.gov/"
+    );
+},
+{
+    address =     (
+                {
+            city = Topeka;
+            line1 = "Kansas Secretary of State Memorial Hall";
+            line2 = "1st Floor";
+            line3 = "120 SW 10th Avenue";
+            state = KS;
+            zip = 66612;
+        }
+    );
+    channels =     (
+                {
+            id = "Kansas-Secretary-of-State";
+            type = Facebook;
+        },
+                {
+            id = kansassos;
+            type = Twitter;
+        }
+    );
+    emails =     (
+        "kssos@sos.ks.gov"
+    );
+    name = "Kris W. Kobach";
+    party = Republican;
+    phones =     (
+        "(785) 296-4564"
+    );
+    urls =     (
+        "http://www.kssos.org/"
+    );
+},
+{
+    channels =     (
+                {
+            id = KansasInsuranceDepartment;
+            type = Facebook;
+        }
+    );
+    emails =     (
+        "commissioner@ksinsurance.org"
+    );
+    name = "Ken Selzer";
+    party = Republican;
+    phones =     (
+        "(785) 296-3071"
+    );
+    urls =     (
+        "http://www.ksinsurance.org/"
+    );
+},
+{
+    address =     (
+                {
+            city = "Kansas City";
+            line1 = "701 Nth 7th Street Suite 20";
+            state = KS;
+            zip = 66101;
+        }
+    );
+    emails =     (
+        "dash@wycokck.org"
+    );
+    name = "Donald Ash";
+    party = Democratic;
+    phones =     (
+        "(913) 573-2861"
+    );
+    urls =     (
+        "http://www.wycokck.org/DefaultDept32.aspx?id=2614"
+    );
+},
+{
+    address =     (
+                {
+            city = "Kansas City";
+            line1 = "701 N 7th Street  9th Floor";
+            state = KS;
+            zip = 66101;
+        }
+    );
+    channels =     (
+                {
+            id = MayorMarkHolland;
+            type = Facebook;
+        },
+                {
+            id = MarkHollandKCK;
+            type = Twitter;
+        }
+    );
+    emails =     (
+        "mayorholland@wycokck.org"
+    );
+    name = "Mark Holland";
+    phones =     (
+        "(913) 573-5010"
+    );
+    urls =     (
+        "http://www.wycokck.org/InternetDept.aspx?id=16210&banner=15284&menu_id=1366"
+    );
+},
+{
+    address =     (
+                {
+            city = "Kansas City";
+            line1 = "701 Nth 7th Street Suite 10";
+            state = KS;
+            zip = 66101;
+        }
+    );
+    name = "Mark Dupree";
+    party = Democratic;
+    phones =     (
+        "(913) 573-2851"
+    );
+    urls =     (
+        "http://www.wycokck.org/Internet2010DistAttyBanner.aspx?id=176&banner=6912&menu_id=946"
+    );
+},
+{
+    address =     (
+                {
+            city = "Kansas City";
+            line1 = "710 N. 7th Street,";
+            state = KS;
+            zip = 66101;
+        }
+    );
+    emails =     (
+        "nburns@wycokck.org"
+    );
+    name = "Nancy Burns";
+    party = Unknown;
+    phones =     (
+        "(913) 573-2841"
+    );
+    urls =     (
+        "http://www.wycokck.org/Internetdept.aspx?id=2600&menu_id=1024&banner=15284"
+    );
+},
+{
+    address =     (
+                {
+            city = "Kansas City";
+            line1 = "710 N. 7th Street,";
+            state = KS;
+            zip = 66101;
+        }
+    );
+    emails =     (
+        "dpack@wycokck.org"
+    );
+    name = "Debbie Pack";
+    party = Unknown;
+    phones =     (
+        "(913) 573-2821"
+    );
+    urls =     (
+        "http://www.wycokck.org/treasury/"
+    );
+},
+{
+    address =     (
+                {
+            city = "Kansas City";
+            line1 = "710 N. 7th Street,";
+            state = KS;
+            zip = 66101;
+        }
+    );
+    emails =     (
+        "clerkwest@wycokck.org"
+    );
+    name = "Bridgette D. Cobbins";
+    party = Unknown;
+    phones =     (
+        "(913) 573-5260"
+    );
+    urls =     (
+        "http://www.wycokck.org/InternetDept.aspx?id=18992&menu_id=554&terms=Bridgette%20Cobbins"
+    );
+},
+{
+    address =     (
+                {
+            city = "Kansas City";
+            line1 = "701 Nth 7th Street Suite 979";
+            state = KS;
+            zip = 66101;
+        }
+    );
+    channels =     (
+                {
+            id = cityofkck;
+            type = Facebook;
+        },
+                {
+            id = CityofKCK;
+            type = Twitter;
+        }
+    );
+    emails =     (
+        "mbynum@wycokck.org"
+    );
+    name = "Melissa Bynum";
+    party = Unknown;
+    phones =     (
+        "(913) 573-5040"
+    );
+    urls =     (
+        "http://www.wycokck.org/InternetDept.aspx?id=5750&menu_id=1278&banner=15284"
+    );
+},
+{
+    address =     (
+                {
+            city = "Kansas City";
+            line1 = "701 Nth 7th Street Suite 979";
+            state = KS;
+            zip = 66101;
+        }
+    );
+    channels =     (
+                {
+            id = cityofkck;
+            type = Facebook;
+        },
+                {
+            id = CityofKCK;
+            type = Twitter;
+        }
+    );
+    emails =     (
+        "jmendez@wycokck.org"
+    );
+    name = "John Mendez";
+    party = Unknown;
+    phones =     (
+        "(913) 573-5040"
+    );
+    urls =     (
+        "http://www.wycokck.org/Internetdept.aspx?id=5752&menu_id=1278&banner=15284"
+    );
+}
+)
+, "kind": civicinfo#representativeInfoResponse, "divisions": {
+    "ocd-division/country:us" =     {
+        name = "United States";
+        officeIndices =         (
+            0,
+            1
+        );
+    };
+    "ocd-division/country:us/state:ks" =     {
+        name = Kansas;
+        officeIndices =         (
+            2,
+            4,
+            5,
+            8,
+            9,
+            10,
+            11
+        );
+    };
+    "ocd-division/country:us/state:ks/cd:3" =     {
+        name = "Kansas's 3rd congressional district";
+        officeIndices =         (
+            3
+        );
+    };
+    "ocd-division/country:us/state:ks/county:wyandotte" =     {
+        name = "Wyandotte County";
+    };
+    "ocd-division/country:us/state:ks/county:wyandotte/council_district:3" =     {
+        name = "Wyandotte County Commissioner District 3";
+    };
+    "ocd-division/country:us/state:ks/place:kansas_city" =     {
+        name = "Kansas City city";
+        officeIndices =         (
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+        );
+    };
+    "ocd-division/country:us/state:ks/sldl:31" =     {
+        name = "Kansas State House district 31";
+        officeIndices =         (
+            7
+        );
+    };
+    "ocd-division/country:us/state:ks/sldu:6" =     {
+        name = "Kansas State Senate district 6";
+        officeIndices =         (
+            6
+        );
+    };
+}, "normalizedInput": {
+    city = "Kansas City";
+    line1 = "3150 Woodview Ridge Drive";
+    state = KS;
+    zip = 66103;
+}, "offices": <__NSArrayI 0x17014fdb0>(
+{
+    divisionId = "ocd-division/country:us";
+    levels =     (
+        country
+    );
+    name = "President of the United States";
+    officialIndices =     (
+        0
+    );
+    roles =     (
+        headOfState,
+        headOfGovernment
+    );
+},
+{
+    divisionId = "ocd-division/country:us";
+    levels =     (
+        country
+    );
+    name = "Vice-President of the United States";
+    officialIndices =     (
+        1
+    );
+    roles =     (
+        deputyHeadOfGovernment
+    );
+},
+{
+    divisionId = "ocd-division/country:us/state:ks";
+    levels =     (
+        country
+    );
+    name = "United States Senate";
+    officialIndices =     (
+        2,
+        3
+    );
+    roles =     (
+        legislatorUpperBody
+    );
+},
+{
+    divisionId = "ocd-division/country:us/state:ks/cd:3";
+    levels =     (
+        country
+    );
+    name = "United States House of Representatives KS-03";
+    officialIndices =     (
+        4
+    );
+    roles =     (
+        legislatorLowerBody
+    );
+},
+{
+    divisionId = "ocd-division/country:us/state:ks";
+    levels =     (
+        administrativeArea1
+    );
+    name = Governor;
+    officialIndices =     (
+        5
+    );
+    roles =     (
+        headOfGovernment
+    );
+},
+{
+    divisionId = "ocd-division/country:us/state:ks";
+    levels =     (
+        administrativeArea1
+    );
+    name = "Lieutenant Governor";
+    officialIndices =     (
+        6
+    );
+    roles =     (
+        deputyHeadOfGovernment
+    );
+},
+{
+    divisionId = "ocd-division/country:us/state:ks/sldu:6";
+    levels =     (
+        administrativeArea1
+    );
+    name = "KS State Senate District 6";
+    officialIndices =     (
+        7
+    );
+    roles =     (
+        legislatorUpperBody
+    );
+},
+{
+    divisionId = "ocd-division/country:us/state:ks/sldl:31";
+    levels =     (
+        administrativeArea1
+    );
+    name = "KS State House District 31";
+    officialIndices =     (
+        8
+    );
+    roles =     (
+        legislatorLowerBody
+    );
+},
+{
+    divisionId = "ocd-division/country:us/state:ks";
+    name = "State Treasurer";
+    officialIndices =     (
+        9
+    );
+},
+{
+    divisionId = "ocd-division/country:us/state:ks";
+    name = "Attorney General";
+    officialIndices =     (
+        10
+    );
+},
+{
+    divisionId = "ocd-division/country:us/state:ks";
+    name = "Secretary of State";
+    officialIndices =     (
+        11
+    );
+},
+{
+    divisionId = "ocd-division/country:us/state:ks";
+    name = "Insurance Commissioner";
+    officialIndices =     (
+        12
+    );
+},
+{
+    divisionId = "ocd-division/country:us/state:ks/place:kansas_city";
+    name = Sheriff;
+    officialIndices =     (
+        13
+    );
+},
+{
+    divisionId = "ocd-division/country:us/state:ks/place:kansas_city";
+    name = "Mayor/CEO";
+    officialIndices =     (
+        14
+    );
+},
+{
+    divisionId = "ocd-division/country:us/state:ks/place:kansas_city";
+    name = "District Attorney";
+    officialIndices =     (
+        15
+    );
+},
+{
+    divisionId = "ocd-division/country:us/state:ks/place:kansas_city";
+    name = "Register of Deeds";
+    officialIndices =     (
+        16
+    );
+},
+{
+    divisionId = "ocd-division/country:us/state:ks/place:kansas_city";
+    name = "Director of Revenue";
+    officialIndices =     (
+        17
+    );
+},
+{
+    divisionId = "ocd-division/country:us/state:ks/place:kansas_city";
+    name = "Unified Government Clerk";
+    officialIndices =     (
+        18
+    );
+},
+{
+    divisionId = "ocd-division/country:us/state:ks/place:kansas_city";
+    name = "Unified Government Commissioner, At Large, District 1";
+    officialIndices =     (
+        19
+    );
+},
+{
+    divisionId = "ocd-division/country:us/state:ks/place:kansas_city";
+    name = "Unified Government Commissioner, At Large, District 2";
+    officialIndices =     (
+        20
+    );
+}
+)
+]

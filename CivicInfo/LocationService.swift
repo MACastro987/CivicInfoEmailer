@@ -15,15 +15,25 @@ class LocationService: NSObject, CLLocationManagerDelegate {
     
     public var presenter: MainPresenter?
     
-    override init() {
+//    override init() {
+//        super.init()
+//        
+//        locationManager.delegate = self
+//        locationManager.requestWhenInUseAuthorization()
+//        locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
+//    }
+    
+    init(presenter: MainPresenter) {
         super.init()
+        
+        self.presenter = presenter
         
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyKilometer
     }
     
-    func enableLocationManager() {
+    func updateLocation() {
         locationManager.startUpdatingLocation()
     }
     

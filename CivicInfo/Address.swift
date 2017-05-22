@@ -10,43 +10,50 @@ import Foundation
 import CoreLocation
 
 struct Address {
-    var url: URL? {
-        didSet {
-            if (url != nil) {
-                print("Yea!")
-                //tell presenter to request representatives
-            }
-        }
-    }
+
+    let street: String
+    let city: String
+    let state: String
     
     enum SerializationError: Error {
         case missing(String)
     }
     
-    init(placemark: CLPlacemark) {
+    init(placemark: CLPlacemark) throws {
         
-        if let state = placemark.administrativeArea,
-            let locality = placemark.locality,
-            let name = placemark.name {
-            
-            //create URL from string components
-            let base:String = "https://www.googleapis.com/civicinfo/v2/representatives?:"
-            let key:String = "key=AIzaSyCgSLnS6o8BMt_UKccjOqx4zuyKGMX1XRA"
-            let apnd = "%20"
-            let stringBuilder: String = base + key + "&address=" + name + apnd + locality + apnd + state
-            
-            
-            let formattedString: String = stringBuilder.replacingOccurrences(of: " ",
-                                                                             with: "%20",
-                                                                             options: .regularExpression)
-            
-            print("\nformattedString: \(formattedString)")
-            
-            setURL(newValue: formattedString)
+        guard let street = placemark.name  else {
+            throw SerializationError.missing("Missing street")
         }
+        guard let city = placemark.locality else {
+            throw SerializationError.missing("Missing city")
+        }
+        guard let state = placemark.administrativeArea else {
+            throw SerializationError.missing("Missing state")
+        }
+        
+        self.street = street
+        self.city = city
+        self.state = state
     }
     
-    mutating func setURL(newValue: String) {
-        self.url = URL(string: newValue)
+    func url() -> URL? {
+        
+        var url: URL!
+        
+        //create URL from string components
+        let base:String = "https://www.googleapis.com/civicinfo/v2/representatives?"
+
+        let key: String = "key=AIzaSyBsfiJNet4tVvu1IFPG4qwSRuEw7e1b6h8"
+        let rawString: String = base + key + "&address=" + street + city + state
+        
+        let encodedString: String = rawString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        
+        print("\nencodedString: \(encodedString)")
+        
+        url = URL(string: encodedString as String)
+        
+        print("\nurl: \(url)")
+        
+        return url
     }
 }

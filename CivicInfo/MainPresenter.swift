@@ -11,20 +11,23 @@ import CoreLocation
 
 class MainPresenter
 {
+    private var mainView: RepresentativeView?
+    private var locationService: LocationService?
+    
     public var placemark: CLPlacemark? {
         didSet {
             print(placemark!)
-            address = Address(placemark: placemark!)
+            do {
+                address = try Address(placemark: placemark!)
+            } catch {
+                print("Unable to set MainPresenter.address with placemark")
+            }
         }
     }
     
-    private var mainView: RepresentativeView?
-    private let locationService = LocationService()
     private var address: Address? {
         didSet {
-            print(address?.url ?? "\nNo value for address?.url")
-            
-            self.requestRepresentatives(for: address!)
+//            requestRepresentatives(for: address!)
         }
     }
     
@@ -36,9 +39,9 @@ class MainPresenter
         mainView = nil
     }
     
-    func getAddress() {
-        locationService.presenter = self
-        locationService.enableLocationManager()
+    func updateLocation() {
+        locationService = LocationService(presenter: self)
+        locationService?.updateLocation()
     }
     
     func requestRepresentatives(for address: Address) {
