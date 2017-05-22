@@ -16,10 +16,20 @@ class ContactViewController: UIViewController {
     @IBOutlet weak var emailAddressField: UITextField!
     @IBOutlet weak var emailBodyView: UITextView!
     @IBOutlet weak var phoneNumberLabel: UILabel!
-    @IBOutlet weak var callButton: UIButton!
+    
+    @IBAction func sendEmail(_ sender: Any) {
+        print("Sending email: \(String(describing: emailAddressField.text))")
+    }
+    @IBAction func call(_ sender: Any) {
+        print("Calling number: \(String(describing: phoneNumberLabel.text))")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emailBodyView.delegate = self
+        emailBodyView.text = "Enter you message here"
+        emailBodyView.textColor = .lightGray
 
         if representative?.name != nil {
             nameLabel.text = representative?.name
@@ -35,9 +45,16 @@ class ContactViewController: UIViewController {
             phoneNumberLabel.text = representative?.phone?.first
         }
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+extension ContactViewController: UITextViewDelegate {
+    
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+        
+        return true
     }
 }

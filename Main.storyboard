@@ -89,7 +89,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Message Body" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Uc9-DX-TC7">
-                                <rect key="frame" x="16" y="131" width="343" height="412"/>
+                                <rect key="frame" x="16" y="131" width="343" height="301"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -98,6 +98,9 @@
                                 <rect key="frame" x="16" y="617" width="343" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Call"/>
+                                <connections>
+                                    <action selector="call:" destination="Osw-Lr-fWy" eventType="touchUpInside" id="E0u-PX-9ub"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcd-vF-DaZ">
                                 <rect key="frame" x="16" y="588" width="343" height="21"/>
@@ -105,14 +108,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27N-Q6-1fV">
+                                <rect key="frame" x="16" y="440" width="343" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="sendEmail:" destination="Osw-Lr-fWy" eventType="touchUpInside" id="J0a-Jl-0Nd"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="27N-Q6-1fV" secondAttribute="trailing" id="1gm-qb-Zid"/>
+                            <constraint firstItem="27N-Q6-1fV" firstAttribute="top" secondItem="Uc9-DX-TC7" secondAttribute="bottom" constant="8" id="2Ni-q0-mV5"/>
+                            <constraint firstItem="rcd-vF-DaZ" firstAttribute="top" secondItem="27N-Q6-1fV" secondAttribute="bottom" constant="118" id="3H7-yP-mps"/>
+                            <constraint firstItem="27N-Q6-1fV" firstAttribute="centerX" secondItem="V5p-jW-oKI" secondAttribute="centerX" id="40t-24-sPJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Qe1-sw-0Jh" secondAttribute="trailing" id="6jW-09-w5P"/>
                             <constraint firstItem="CGs-nL-EDZ" firstAttribute="top" secondItem="VxK-4O-VYT" secondAttribute="bottom" constant="20" id="C81-dY-oDZ"/>
                             <constraint firstItem="Uc9-DX-TC7" firstAttribute="centerX" secondItem="V5p-jW-oKI" secondAttribute="centerX" id="EE6-gx-nqm"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Uc9-DX-TC7" secondAttribute="leading" id="F7W-Bm-sND"/>
-                            <constraint firstItem="rcd-vF-DaZ" firstAttribute="top" secondItem="Uc9-DX-TC7" secondAttribute="bottom" constant="45" id="Jea-Kb-Xm4"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Qe1-sw-0Jh" secondAttribute="leading" id="NFM-iX-VgW"/>
                             <constraint firstItem="VxK-4O-VYT" firstAttribute="top" secondItem="rcd-vF-DaZ" secondAttribute="bottom" constant="8" id="Ng9-Hj-lrV"/>
                             <constraint firstItem="rcd-vF-DaZ" firstAttribute="centerX" secondItem="V5p-jW-oKI" secondAttribute="centerX" id="OL6-JY-JES"/>
@@ -129,10 +143,10 @@
                             <constraint firstItem="Qe1-sw-0Jh" firstAttribute="top" secondItem="01f-sj-BdB" secondAttribute="bottom" constant="8" id="uAq-uh-zIN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Uc9-DX-TC7" secondAttribute="trailing" id="uoq-UY-ztC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rcd-vF-DaZ" secondAttribute="trailing" id="w8L-qg-9g0"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="27N-Q6-1fV" secondAttribute="leading" id="yLm-Ue-lLr"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="callButton" destination="VxK-4O-VYT" id="pJD-FI-1y4"/>
                         <outlet property="emailAddressField" destination="Qe1-sw-0Jh" id="962-kv-xdb"/>
                         <outlet property="emailBodyView" destination="Uc9-DX-TC7" id="VuY-kZ-wXy"/>
                         <outlet property="nameLabel" destination="01f-sj-BdB" id="aqt-TC-7r0"/>
