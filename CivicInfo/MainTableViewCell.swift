@@ -11,6 +11,8 @@ import UIKit
 class MainTableViewCell: UITableViewCell {
 
     @IBOutlet weak var photoView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var partyLabel: UILabel!
     
     let imageCache = NSCache<NSString, UIImage>()
     
@@ -18,6 +20,14 @@ class MainTableViewCell: UITableViewCell {
     {
         didSet
         {
+            if (representative?.name != nil) {
+                nameLabel.text = representative?.name
+            }
+            
+            if (representative?.party != nil) {
+                partyLabel.text = representative?.party
+            }
+            
             if (representative?.imageURL != nil)
             {
                 if let url = representative?.imageURL!
@@ -58,6 +68,10 @@ class MainTableViewCell: UITableViewCell {
                 }
             }
         }
+    }
+    
+    override func layoutSubviews() {
+        photoView.representativeCustomView()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -22,6 +22,9 @@ class MainViewController: UIViewController
     {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "AvenirNext-Bold", size: 20)!]
+
+        
         mainPresenter.attachView(view: self)
         
         mainPresenter.updateLocation()
@@ -32,17 +35,6 @@ class MainViewController: UIViewController
     
     override func didReceiveMemoryWarning() {
         //mainPresenter.flushCache()
-    }
-    
-    let detailSegue = "contactSegue"
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if  segue.identifier == detailSegue,
-            let contactView = segue.destination as? ContactViewController,
-            let index = tableView.indexPathForSelectedRow?.row
-        {
-            contactView.representative = Representatives[index]
-        }
     }
 }
 

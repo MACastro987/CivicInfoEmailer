@@ -2,7 +2,7 @@
 {
 "name": "Michael Castro",
 
-"party": "Independant",
+"party": "Independent",
 
 "photoUrl": "http://i0.kym-cdn.com/photos/images/facebook/000/288/632/0bb.jpg",
 

@@ -88,6 +88,10 @@ struct ClientService {
                     representative.name = name
                 }
                 
+                if let party = official["party"] as? String {
+                    representative.party = party
+                }
+                
                 if let imageUrlString = official["photoUrl"] as? String {
                     if let imageUrl = URL(string: imageUrlString) {
                         representative.imageURL = imageUrl
