@@ -13,6 +13,7 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var partyLabel: UILabel!
+    @IBOutlet weak var statusIndicator: UIActivityIndicatorView!
     
     let imageCache = NSCache<NSString, UIImage>()
     
@@ -40,6 +41,8 @@ class MainTableViewCell: UITableViewCell {
                     {
                         photoView.image = imageCache.object(forKey: key)
                         
+                        self.hideStatusIndicator()
+                        
                     } else {
                         
                         URLSession.shared.dataTask(with: url, completionHandler: {(data, repsonse, error) ->
@@ -57,6 +60,8 @@ class MainTableViewCell: UITableViewCell {
                                 DispatchQueue.main.async { () -> Void in
                                     
                                     self.photoView?.image = image
+                                    
+                                    self.hideStatusIndicator()
                                 }
                             }
                         }).resume()
@@ -65,12 +70,23 @@ class MainTableViewCell: UITableViewCell {
                     
                 } else {
                     photoView.image = UIImage(named: "icon")
+                    
+                    self.hideStatusIndicator()
                 }
             }
         }
     }
     
+    private func hideStatusIndicator() {
+        statusIndicator.stopAnimating()
+        statusIndicator.isHidden =  true
+    }
+    
     override func layoutSubviews() {
+        
+        statusIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
+        statusIndicator.startAnimating()
+        
         photoView.representativeCustomView()
     }
 

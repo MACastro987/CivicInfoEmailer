@@ -9,8 +9,8 @@
 import Foundation
 import CoreLocation
 
-class MainPresenter
-{
+class MainPresenter {
+    
     //TESTING?
     private var inTestMode: Bool = true
     

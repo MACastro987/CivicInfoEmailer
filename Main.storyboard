@@ -58,19 +58,27 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="IbJ-He-8Kd">
+                                                    <rect key="frame" x="8" y="8" width="105" height="105"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="topMargin" secondItem="cYr-cV-8EY" secondAttribute="top" id="5UQ-wE-tOS"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="cYr-cV-8EY" secondAttribute="bottom" id="Ia6-hD-Y5X"/>
                                                 <constraint firstItem="Xlb-c3-XL1" firstAttribute="centerY" secondItem="Jaf-Cb-Lzf" secondAttribute="centerY" id="JGU-1P-zWW"/>
                                                 <constraint firstAttribute="leadingMargin" secondItem="cYr-cV-8EY" secondAttribute="leading" id="O36-im-xlp"/>
+                                                <constraint firstItem="IbJ-He-8Kd" firstAttribute="height" secondItem="cYr-cV-8EY" secondAttribute="height" id="eB7-Iq-6Ch"/>
                                                 <constraint firstItem="Xlb-c3-XL1" firstAttribute="leading" secondItem="cYr-cV-8EY" secondAttribute="trailing" constant="8" id="gWv-ze-64O"/>
+                                                <constraint firstItem="IbJ-He-8Kd" firstAttribute="centerY" secondItem="cYr-cV-8EY" secondAttribute="centerY" id="ohD-wd-thP"/>
+                                                <constraint firstItem="IbJ-He-8Kd" firstAttribute="centerX" secondItem="cYr-cV-8EY" secondAttribute="centerX" id="qHL-co-R2B"/>
+                                                <constraint firstItem="IbJ-He-8Kd" firstAttribute="width" secondItem="cYr-cV-8EY" secondAttribute="width" id="qqN-Rd-gzG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameLabel" destination="1Cf-G7-hO4" id="NSh-p8-rJv"/>
                                             <outlet property="partyLabel" destination="IQW-Ww-ifH" id="Awb-V2-wlr"/>
                                             <outlet property="photoView" destination="cYr-cV-8EY" id="ssV-rh-tdL"/>
+                                            <outlet property="statusIndicator" destination="IbJ-He-8Kd" id="j4P-Ci-tSq"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
