@@ -4,7 +4,7 @@ This iOS Application connects users to their Representatives in the U.S. Governm
 
 ### Architecture
 
-CivicInfoEmailer demonstrates the Model-View-Presenter architecture pattern
+CivicInfoEmailer demonstrates the Model-View-Presenter architecture pattern.
 
 ###### View
 
@@ -47,6 +47,8 @@ class MainPresenter {
 
 ### Tests
 
+###### Mocks
+
 The SampleJSON.txt file contains data to mock a CivicInfo Api response. This data may be modified in order to test deserialization methods. 
 
 Load mock JSON data by switching this bool value in MainPresenter.swift.
@@ -75,6 +77,16 @@ private var address: Address? {
                     }
                 })
             }
+```
+
+To mock location data (i.e. CLPlacemark) simply call the mockPlacemark function. 
+
+```Swift 
+extension AddressTest {
+    func mockPlacemark() -> CLPlacemark {
+        return MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 37, longitude: 93))
+    }
+}
 ```
 
 ### Motivation
