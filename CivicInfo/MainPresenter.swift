@@ -12,9 +12,9 @@ import CoreLocation
 class MainPresenter {
     
     //TESTING?
-    private var inTestMode: Bool = true
+    private var inTestMode: Bool = false
     
-    private var mainView: RepresentativeView?
+    private var mainView: MainViewProtocol?
     private var locationService: LocationService?
     
     public var placemark: CLPlacemark? {
@@ -57,7 +57,7 @@ class MainPresenter {
         }
     }
     
-    func attachView(view: RepresentativeView) {
+    func attachView(view: MainViewProtocol) {
         mainView = view
     }
     

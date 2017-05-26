@@ -10,11 +10,11 @@ import UIKit
 
 class MainViewController: UIViewController
 {
-    fileprivate var mainPresenter = MainPresenter()
+    fileprivate var presenter = MainPresenter()
 
     @IBOutlet weak var tableView: UITableView!
     
-    var Representatives = [Representative]() {
+    var representatives = [Representative]() {
         didSet { self.reload() }
     }
     
@@ -25,9 +25,9 @@ class MainViewController: UIViewController
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Avenir-Black", size: 20)!]
 
         
-        mainPresenter.attachView(view: self)
+        presenter.attachView(view: self)
         
-        mainPresenter.updateLocation()
+        presenter.updateLocation()
         
         tableView.delegate = self
         tableView.dataSource = self as UITableViewDataSource
@@ -46,7 +46,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Representatives.count
+        return representatives.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -55,10 +55,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource
         
         let cell: MainTableViewCell = tableView.dequeueReusableCell(withIdentifier: reuseId)! as! MainTableViewCell
 
-        if (Representatives.count != 0) {
+        if (representatives.count != 0) {
             let index: Int = indexPath.row
             
-            cell.representative = Representatives[index]
+            cell.representative = representatives[index]
         }
         
         return cell
@@ -67,12 +67,23 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let contactIdentifier = "contactSegue"
+        if segue.identifier == contactIdentifier {
+            let destination = segue.destination as? ContactViewController,
+            index = tableView.indexPathForSelectedRow?.row
+            
+            destination?.representative = self.representatives[index!]
+        }
+    }
 }
 
-extension MainViewController: RepresentativeView
+extension MainViewController: MainViewProtocol
 {
     func update(representatives: [Representative]) {
-        Representatives = representatives
+        self.representatives = representatives
     }
     
     func reload() {

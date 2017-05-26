@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol RepresentativeView {
+protocol MainViewProtocol {
     func showLoadingIndicator()
     func hideLoadingIndicator()
     func update(representatives: [Representative])

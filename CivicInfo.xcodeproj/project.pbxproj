@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A1E46591ED78A4700FB82BB /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E46581ED78A4700FB82BB /* ContactViewController.swift */; };
+		3A1E465D1ED78CF000FB82BB /* ContactPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E465C1ED78CF000FB82BB /* ContactPresenter.swift */; };
+		3A1E46601ED78E1700FB82BB /* ContactViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E465F1ED78E1700FB82BB /* ContactViewProtocol.swift */; };
 		3A2030F91ECC96B9004A8F7D /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2030F81ECC96B9004A8F7D /* LocationService.swift */; };
 		3A247DBC1ED649DB00E5C4D0 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A247DBB1ED649DB00E5C4D0 /* UIViewExtension.swift */; };
 		3A41EF971ECE50EE00019609 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A41EF961ECE50EE00019609 /* Address.swift */; };
 		3A5CDA3C1EC3C52700E14EAB /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CDA3B1EC3C52700E14EAB /* MainTableViewCell.swift */; };
 		3A5CDA401EC3C97100E14EAB /* Representative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CDA3F1EC3C97100E14EAB /* Representative.swift */; };
 		3A6BEF9E1ECABDD7009E98AE /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6BEF9D1ECABDD7009E98AE /* MainPresenterTest.swift */; };
-		3A85FF3B1EC3B27300741395 /* RepresentativeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85FF3A1EC3B27300741395 /* RepresentativeViewProtocol.swift */; };
+		3A85FF3B1EC3B27300741395 /* MainViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A85FF3A1EC3B27300741395 /* MainViewProtocol.swift */; };
 		3A9BE08B1EC11D1E0048E973 /* ClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9BE08A1EC11D1E0048E973 /* ClientService.swift */; };
 		3A9BE0911EC11E770048E973 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9BE0901EC11E770048E973 /* MainPresenter.swift */; };
 		3A9BE0941EC1295B0048E973 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9BE0931EC1295B0048E973 /* MainViewController.swift */; };
@@ -44,13 +47,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A1E46581ED78A4700FB82BB /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactViewController.swift; path = ../ContactViewController.swift; sourceTree = "<group>"; };
+		3A1E465C1ED78CF000FB82BB /* ContactPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactPresenter.swift; sourceTree = "<group>"; };
+		3A1E465F1ED78E1700FB82BB /* ContactViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewProtocol.swift; sourceTree = "<group>"; };
 		3A2030F81ECC96B9004A8F7D /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		3A247DBB1ED649DB00E5C4D0 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		3A41EF961ECE50EE00019609 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		3A5CDA3B1EC3C52700E14EAB /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		3A5CDA3F1EC3C97100E14EAB /* Representative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Representative.swift; sourceTree = "<group>"; };
 		3A6BEF9D1ECABDD7009E98AE /* MainPresenterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
-		3A85FF3A1EC3B27300741395 /* RepresentativeViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepresentativeViewProtocol.swift; sourceTree = "<group>"; };
+		3A85FF3A1EC3B27300741395 /* MainViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewProtocol.swift; sourceTree = "<group>"; };
 		3A9BE08A1EC11D1E0048E973 /* ClientService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientService.swift; sourceTree = "<group>"; };
 		3A9BE0901EC11E770048E973 /* MainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		3A9BE0931EC1295B0048E973 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -94,13 +100,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3A247DB91ED6363A00E5C4D0 /* MainView */ = {
+		3A1E46611ED7F32200FB82BB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				3A1E46631ED7F35400FB82BB /* View */,
+				3A1E46641ED7F35E00FB82BB /* Presenter */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		3A1E46621ED7F33600FB82BB /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				3A1E46651ED7F37800FB82BB /* View */,
+				3A1E46661ED7F38700FB82BB /* Presenter */,
+			);
+			name = Contact;
+			sourceTree = "<group>";
+		};
+		3A1E46631ED7F35400FB82BB /* View */ = {
 			isa = PBXGroup;
 			children = (
 				3A9BE0931EC1295B0048E973 /* MainViewController.swift */,
 				3A5CDA3B1EC3C52700E14EAB /* MainTableViewCell.swift */,
 			);
-			name = MainView;
+			name = View;
+			sourceTree = "<group>";
+		};
+		3A1E46641ED7F35E00FB82BB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3A9BE0901EC11E770048E973 /* MainPresenter.swift */,
+				3A85FF3A1EC3B27300741395 /* MainViewProtocol.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		3A1E46651ED7F37800FB82BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A1E46581ED78A4700FB82BB /* ContactViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3A1E46661ED7F38700FB82BB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				3A1E465C1ED78CF000FB82BB /* ContactPresenter.swift */,
+				3A1E465F1ED78E1700FB82BB /* ContactViewProtocol.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		3A1E46671ED7F3BC00FB82BB /* CivicInfoApi */ = {
+			isa = PBXGroup;
+			children = (
+				3AD584741ED33757009D4A0C /* SampleJSON.txt */,
+				3A9BE08A1EC11D1E0048E973 /* ClientService.swift */,
+			);
+			name = CivicInfoApi;
+			sourceTree = "<group>";
+		};
+		3A1E46681ED7F3C700FB82BB /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				3A2030F81ECC96B9004A8F7D /* LocationService.swift */,
+			);
+			name = Location;
 			sourceTree = "<group>";
 		};
 		3A5CDA411EC3CA1700E14EAB /* Model */ = {
@@ -124,8 +191,8 @@
 		3A9BE08C1EC11D520048E973 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				3A9BE08A1EC11D1E0048E973 /* ClientService.swift */,
-				3A2030F81ECC96B9004A8F7D /* LocationService.swift */,
+				3A1E46671ED7F3BC00FB82BB /* CivicInfoApi */,
+				3A1E46681ED7F3C700FB82BB /* Location */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -147,23 +214,6 @@
 				3AC0B9D81EA588BD0076BB71 /* Info.plist */,
 			);
 			name = Application;
-			sourceTree = "<group>";
-		};
-		3A9BE08F1EC11E010048E973 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				3A247DB91ED6363A00E5C4D0 /* MainView */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		3A9BE0921EC11E7D0048E973 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				3A85FF3A1EC3B27300741395 /* RepresentativeViewProtocol.swift */,
-				3A9BE0901EC11E770048E973 /* MainPresenter.swift */,
-			);
-			name = Presenter;
 			sourceTree = "<group>";
 		};
 		3AC0B9C01EA588B80076BB71 = {
@@ -189,12 +239,11 @@
 		3AC0B9CB1EA588B90076BB71 /* CivicInfo */ = {
 			isa = PBXGroup;
 			children = (
-				3AD584741ED33757009D4A0C /* SampleJSON.txt */,
 				3A9BE08E1EC11DEA0048E973 /* Application */,
+				3A1E46611ED7F32200FB82BB /* Main */,
+				3A1E46621ED7F33600FB82BB /* Contact */,
 				3A9BE08D1EC11DA50048E973 /* Storyboard */,
 				3A5CDA411EC3CA1700E14EAB /* Model */,
-				3A9BE08F1EC11E010048E973 /* View */,
-				3A9BE0921EC11E7D0048E973 /* Presenter */,
 				3A9BE08C1EC11D520048E973 /* Service */,
 			);
 			path = CivicInfo;
@@ -365,13 +414,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A5CDA401EC3C97100E14EAB /* Representative.swift in Sources */,
+				3A1E465D1ED78CF000FB82BB /* ContactPresenter.swift in Sources */,
 				3A9BE0911EC11E770048E973 /* MainPresenter.swift in Sources */,
 				3A247DBC1ED649DB00E5C4D0 /* UIViewExtension.swift in Sources */,
 				3A2030F91ECC96B9004A8F7D /* LocationService.swift in Sources */,
 				3AC0B9CD1EA588BA0076BB71 /* AppDelegate.swift in Sources */,
 				3A9BE08B1EC11D1E0048E973 /* ClientService.swift in Sources */,
+				3A1E46591ED78A4700FB82BB /* ContactViewController.swift in Sources */,
 				3A5CDA3C1EC3C52700E14EAB /* MainTableViewCell.swift in Sources */,
-				3A85FF3B1EC3B27300741395 /* RepresentativeViewProtocol.swift in Sources */,
+				3A1E46601ED78E1700FB82BB /* ContactViewProtocol.swift in Sources */,
+				3A85FF3B1EC3B27300741395 /* MainViewProtocol.swift in Sources */,
 				3A41EF971ECE50EE00019609 /* Address.swift in Sources */,
 				3A9BE0941EC1295B0048E973 /* MainViewController.swift in Sources */,
 			);
