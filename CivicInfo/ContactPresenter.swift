@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class ContactPresenter {
     
@@ -31,8 +32,11 @@ class ContactPresenter {
             UIApplication.shared.openURL(url)
         }
     }
-    
-    func email(address: String) {
-        print("emailing address: \(address)")
-    }
 }
+
+
+
+
+
+
+

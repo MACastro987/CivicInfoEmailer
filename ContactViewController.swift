@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class ContactViewController: UITableViewController {
     
@@ -55,8 +56,24 @@ extension ContactViewController: ContactViewProtocol {
     func call(number: String) {
         presenter.call(number: number)
     }
+}
+
+extension ContactViewController: MFMailComposeViewControllerDelegate {
     
     func email(address: String) {
-        presenter.email(address: address)
+        
+        let composeViewController = MFMailComposeViewController()
+        composeViewController.mailComposeDelegate = self
+        
+        composeViewController.setToRecipients([emailLabel.text!])
+        composeViewController.setSubject("A message from your constituent")
+        composeViewController.setMessageBody("Message...", isHTML: false)
+        
+        self.present(composeViewController, animated: true, completion: nil)
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        
+        controller.dismiss(animated: true, completion: nil)
     }
 }
