@@ -6,7 +6,7 @@
 //  Copyright © 2017 Michael Castro. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ContactPresenter {
     
@@ -21,7 +21,15 @@ class ContactPresenter {
     }
     
     func call(number: String) {
-        print("calling number: \(number)")
+        let phone = number.replacingOccurrences(of: "[ |()-]", with: "", options: [.regularExpression])
+        
+        let url = URL(string: "telprompt://" + phone)!
+        
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
     }
     
     func email(address: String) {

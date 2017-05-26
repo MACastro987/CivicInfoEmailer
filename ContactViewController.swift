@@ -39,13 +39,13 @@ class ContactViewController: UITableViewController {
     
     @IBAction func call(_ sender: Any) {
         if phoneNumberLabel.text != nil {
-            self.call(number: phoneNumberLabel.text!)
+            call(number: phoneNumberLabel.text!)
         }
     }
     
     @IBAction func email(_ sender: Any) {
         if emailLabel.text != nil {
-            self.email(address: emailLabel.text!)    
+            email(address: emailLabel.text!)    
         }
     }
 }

@@ -12,7 +12,7 @@ import CoreLocation
 class MainPresenter {
     
     //TESTING?
-    private var inTestMode: Bool = false
+    private var inTestMode: Bool = true
     
     private var mainView: MainViewProtocol?
     private var locationService: LocationService?
