@@ -13,6 +13,7 @@ public struct Representative {
     public var name: String?
     public var party: String?
     public var imageURL: URL?
+    public var image: UIImage?
     public var email: [String]?
     public var phone: [String]?
 }

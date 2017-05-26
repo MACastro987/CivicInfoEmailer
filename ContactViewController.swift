@@ -14,6 +14,7 @@ class ContactViewController: UITableViewController {
     fileprivate var presenter = ContactPresenter()
     public var representative: Representative?
 
+    @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
@@ -36,6 +37,14 @@ class ContactViewController: UITableViewController {
         if let email = representative?.email?.first {
             emailLabel.text = email
         }
+        
+        if let image: UIImage = representative?.image {
+            photoView.image = image
+        }
+    }
+    
+    override func viewWillLayoutSubviews() {
+        photoView.representativeCustomView()
     }
     
     @IBAction func call(_ sender: Any) {

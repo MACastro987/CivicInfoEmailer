@@ -70,12 +70,20 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let contactIdentifier = "contactSegue"
-        if segue.identifier == contactIdentifier {
+        
+        if segue.identifier == "contactSegue" {
             let destination = segue.destination as? ContactViewController,
-            index = tableView.indexPathForSelectedRow?.row
+            indexPath = tableView.indexPathForSelectedRow
             
-            destination?.representative = self.representatives[index!]
+            var representative = self.representatives[(indexPath?.row)!]
+            
+            let selectedCell: MainTableViewCell = tableView.cellForRow(at: indexPath!) as! MainTableViewCell
+            
+            if let image: UIImage = selectedCell.photoView.image {
+                representative.image = image
+            }
+            
+            destination?.representative = representative
         }
     }
 }

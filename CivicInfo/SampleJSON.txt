@@ -4,7 +4,7 @@
 
 "party": "Independent",
 
-"photoUrl": "http://i0.kym-cdn.com/photos/images/facebook/000/288/632/0bb.jpg",
+"photoUrl": "https://static.comicvine.com/uploads/square_small/11/111746/4352062-marvin_the_martian.svg.jpg",
 
 "email": ["castro.michael87@gmail.com"],
 
