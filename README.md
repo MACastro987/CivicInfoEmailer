@@ -45,6 +45,37 @@ class MainPresenter {
 }
 ```
 
+### Image Caching
+
+Each prototype cell in the MainTableView contains an image caching mechanism. As the tableView dequeues each cell, the imageCache will persist downloaded images. When a cell is reloaded by the tableView, those images are immediately available without another asynchronous download.
+
+````Swift
+class MainTableViewCell: UITableViewCell {
+    
+    let imageCache = NSCache<NSString, UIImage>()
+    
+    public var representative : Representative?
+  
+        didSet
+        {    
+            if (representative?.imageURL != nil)
+            {
+                /*The key to each image in imageCache 
+                is created from the url path to the image*/   
+                let key: NSString = NSString(string: url.path)
+
+                //Check for image in cache            
+                if (imageCache.object(forKey: key) != nil)
+                {
+                    photoView.image = imageCache.object(forKey: key)
+
+                    self.hideStatusIndicator()
+
+                } else {
+                    //A key was not found for this image
+                    //Load the image asynchronously
+                }
+````
 ### Tests
 
 ###### Mocks
