@@ -267,6 +267,8 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="callButton" destination="Ri4-JK-0iI" id="PkA-j5-WgL"/>
+                        <outlet property="emailButton" destination="aWK-cI-aw5" id="KYT-26-5FB"/>
                         <outlet property="emailLabel" destination="8Eh-Dm-xgV" id="N9Y-f4-Rkw"/>
                         <outlet property="nameLabel" destination="L8s-el-iMq" id="918-4g-Xbf"/>
                         <outlet property="phoneNumberLabel" destination="Qgn-ke-t0E" id="gZR-Nm-UnN"/>

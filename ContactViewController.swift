@@ -17,7 +17,9 @@ class ContactViewController: UITableViewController {
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
+    @IBOutlet weak var callButton: UIButton!
     @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var emailButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,11 +33,21 @@ class ContactViewController: UITableViewController {
         if let name = representative?.name {
             nameLabel.text = name
         }
+        
         if let phone = representative?.phone?.first {
             phoneNumberLabel.text = phone
+        } else {
+            //Disable phone when number not provided
+            callButton.isHidden = true
+            phoneNumberLabel.text = "Not Available"
         }
+        
         if let email = representative?.email?.first {
             emailLabel.text = email
+        } else {
+            //Diable email when address not provided
+            emailButton.isHidden = true
+            emailLabel.text = "Not Available"
         }
         
         if let image: UIImage = representative?.image {

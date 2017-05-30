@@ -77,6 +77,9 @@ class MainTableViewCell: UITableViewCell {
         }
     }
     
+    private func loadImageAsync() {
+        
+    }
     private func hideStatusIndicator() {
         statusIndicator.stopAnimating()
         statusIndicator.isHidden =  true
@@ -88,12 +91,6 @@ class MainTableViewCell: UITableViewCell {
         statusIndicator.startAnimating()
         
         photoView.representativeCustomView()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 }
 

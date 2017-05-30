@@ -20,7 +20,9 @@ struct ClientService {
         
         guard let path = Bundle.main.path(forResource: "SampleJSON", ofType: "txt")
             else { return }
+        
         let url = URL(fileURLWithPath: path)
+        
         do {
             let data = try Data(contentsOf: url)
             
