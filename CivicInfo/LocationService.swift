@@ -57,3 +57,6 @@ class LocationService: NSObject, CLLocationManagerDelegate {
         print("Location Manager failed with error : \(error)")
     }
 }
+
+
+

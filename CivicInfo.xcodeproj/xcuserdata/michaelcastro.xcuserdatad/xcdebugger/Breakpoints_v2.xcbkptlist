@@ -24,11 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CivicInfo/MainViewController.swift"
-            timestampString = "517522494.418237"
+            timestampString = "518570881.712178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "hideLoadingIndicator()"
             landmarkType = "7">
          </BreakpointContent>

@@ -11,6 +11,12 @@ import UIKit
 class MainViewController: UIViewController
 {
     fileprivate var presenter = MainPresenter()
+    
+    public var zipCode: String? {
+        didSet {
+            print("zipCode: \(zipCode!)")
+        }
+    }
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -27,6 +33,7 @@ class MainViewController: UIViewController
         
         presenter.attachView(view: self)
         
+        //Testing        
         presenter.updateLocation()
         
         tableView.delegate = self
@@ -36,6 +43,9 @@ class MainViewController: UIViewController
     override func didReceiveMemoryWarning() {
         //mainPresenter.flushCache()
     }
+    
+    @IBAction func unwindToMain(segue:UIStoryboardSegue) { }
+
 }
 
 // MARK: - Table view data source

@@ -104,22 +104,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3A1E46611ED7F32200FB82BB /* Main */ = {
+		3A1E46611ED7F32200FB82BB /* Main Scene */ = {
 			isa = PBXGroup;
 			children = (
 				3A1E46631ED7F35400FB82BB /* View */,
 				3A1E46641ED7F35E00FB82BB /* Presenter */,
 			);
-			name = Main;
+			name = "Main Scene";
 			sourceTree = "<group>";
 		};
-		3A1E46621ED7F33600FB82BB /* Contact */ = {
+		3A1E46621ED7F33600FB82BB /* Contact Scene */ = {
 			isa = PBXGroup;
 			children = (
 				3A1E46651ED7F37800FB82BB /* View */,
 				3A1E46661ED7F38700FB82BB /* Presenter */,
 			);
-			name = Contact;
+			name = "Contact Scene";
 			sourceTree = "<group>";
 		};
 		3A1E46631ED7F35400FB82BB /* View */ = {
@@ -220,6 +220,16 @@
 			name = Application;
 			sourceTree = "<group>";
 		};
+		3ABA415D1EE8BA4700DCFE30 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				3A1E46611ED7F32200FB82BB /* Main Scene */,
+				3A1E46621ED7F33600FB82BB /* Contact Scene */,
+				3AE035F71EDCFB39007DE680 /* Configuration Scene */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
 		3AC0B9C01EA588B80076BB71 = {
 			isa = PBXGroup;
 			children = (
@@ -244,10 +254,8 @@
 			isa = PBXGroup;
 			children = (
 				3A9BE08E1EC11DEA0048E973 /* Application */,
-				3A1E46611ED7F32200FB82BB /* Main */,
-				3A1E46621ED7F33600FB82BB /* Contact */,
-				3AE035F71EDCFB39007DE680 /* Configuration */,
 				3A9BE08D1EC11DA50048E973 /* Storyboard */,
+				3ABA415D1EE8BA4700DCFE30 /* Scenes */,
 				3A5CDA411EC3CA1700E14EAB /* Model */,
 				3A9BE08C1EC11D520048E973 /* Service */,
 			);
@@ -281,13 +289,13 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		3AE035F71EDCFB39007DE680 /* Configuration */ = {
+		3AE035F71EDCFB39007DE680 /* Configuration Scene */ = {
 			isa = PBXGroup;
 			children = (
 				3AE035F81EDFAC2C007DE680 /* View */,
 				3AE035FB1EDFAC52007DE680 /* Presenter */,
 			);
-			name = Configuration;
+			name = "Configuration Scene";
 			sourceTree = "<group>";
 		};
 		3AE035F81EDFAC2C007DE680 /* View */ = {

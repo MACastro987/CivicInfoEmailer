@@ -44,8 +44,9 @@ struct Address {
         let base:String = "https://www.googleapis.com/civicinfo/v2/representatives?"
 
         let key: String = "key=AIzaSyBsfiJNet4tVvu1IFPG4qwSRuEw7e1b6h8"
-        let rawString: String = base + key + "&address=" + street + city + state
         
+        let rawString: String = base + key + "&address=" + street + city + state
+
         let encodedString: String = rawString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         
         print("\nencodedString: \(encodedString)")

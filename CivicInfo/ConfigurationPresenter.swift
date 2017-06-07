@@ -9,7 +9,6 @@
 import UIKit
 
 protocol ConfigurationProtocol {
-    func setAddress()
     func blurBackground()
 }
 
