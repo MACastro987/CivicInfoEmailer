@@ -44,7 +44,13 @@ class MainViewController: UIViewController
         //mainPresenter.flushCache()
     }
     
-    @IBAction func unwindToMain(segue:UIStoryboardSegue) { }
+    @IBAction func unwindToMain(segue:UIStoryboardSegue) {
+        if let zip = zipCode {
+            let address: Address = Address(zipCode: zip)
+            
+            presenter.address = address
+        }
+    }
 
 }
 

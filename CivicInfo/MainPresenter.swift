@@ -28,7 +28,7 @@ class MainPresenter {
         }
     }
     
-    private var address: Address? {
+    public var address: Address? {
         didSet {
             
             if self.inTestMode {

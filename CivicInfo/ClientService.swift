@@ -43,7 +43,7 @@ struct ClientService {
     {
         var representatives = [Representative]()
         
-        if let url = address.url() {
+        if let url: URL = address.url() {
             
             URLSession.shared.dataTask(with: url, completionHandler: {
                 (data, response, error) in

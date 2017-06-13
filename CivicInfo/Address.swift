@@ -10,30 +10,26 @@ import Foundation
 import CoreLocation
 
 struct Address {
-
-    let street: String
-    let city: String
-    let state: String
+    var zipCode: String {
+        didSet {
+            print("zipCode : \(zipCode)")
+        }
+    }
     
-    enum SerializationError: Error {
-        case missing(String)
+    enum AddressError: Error {
+        case invalid(String)
     }
     
     init(placemark: CLPlacemark) throws {
-        
-        guard let street = placemark.name  else {
-            throw SerializationError.missing("Missing street")
-        }
-        guard let city = placemark.locality else {
-            throw SerializationError.missing("Missing city")
-        }
-        guard let state = placemark.administrativeArea else {
-            throw SerializationError.missing("Missing state")
+        guard let postalCode = placemark.postalCode else {
+            throw AddressError.invalid("invalid zipCode")
         }
         
-        self.street = street
-        self.city = city
-        self.state = state
+        self.zipCode = postalCode
+    }
+    
+    init(zipCode: String) {
+        self.zipCode = zipCode
     }
     
     func url() -> URL? {
@@ -42,14 +38,13 @@ struct Address {
         
         //create URL from string components
         let base:String = "https://www.googleapis.com/civicinfo/v2/representatives?"
-
+        
         let key: String = "key=AIzaSyBsfiJNet4tVvu1IFPG4qwSRuEw7e1b6h8"
         
-        let rawString: String = base + key + "&address=" + street + city + state
-
+        let rawString: String = base + key + "&address=" + self.zipCode
+        
         let encodedString: String = rawString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         
-        print("\nencodedString: \(encodedString)")
         
         url = URL(string: encodedString as String)
         
@@ -58,3 +53,4 @@ struct Address {
         return url
     }
 }
+
