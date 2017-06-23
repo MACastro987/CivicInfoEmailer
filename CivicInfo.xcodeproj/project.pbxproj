@@ -11,6 +11,7 @@
 		3A1E465D1ED78CF000FB82BB /* ContactPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E465C1ED78CF000FB82BB /* ContactPresenter.swift */; };
 		3A1E46601ED78E1700FB82BB /* ContactViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1E465F1ED78E1700FB82BB /* ContactViewProtocol.swift */; };
 		3A2030F91ECC96B9004A8F7D /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2030F81ECC96B9004A8F7D /* LocationService.swift */; };
+		3A2053EB1EF35C020044C523 /* CivicImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2053EA1EF35C020044C523 /* CivicImageCache.swift */; };
 		3A247DBC1ED649DB00E5C4D0 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A247DBB1ED649DB00E5C4D0 /* UIViewExtension.swift */; };
 		3A41EF971ECE50EE00019609 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A41EF961ECE50EE00019609 /* Address.swift */; };
 		3A5CDA3C1EC3C52700E14EAB /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CDA3B1EC3C52700E14EAB /* MainTableViewCell.swift */; };
@@ -28,7 +29,6 @@
 		3AD584751ED33757009D4A0C /* SampleJSON.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AD584741ED33757009D4A0C /* SampleJSON.txt */; };
 		3AD584771ED3386C009D4A0C /* AddressTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD584761ED3386C009D4A0C /* AddressTest.swift */; };
 		3AE035F61EDCFB2C007DE680 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE035F51EDCFB2C007DE680 /* ConfigurationViewController.swift */; };
-		3AE035FA1EDFAC4C007DE680 /* ConfigurationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE035F91EDFAC4C007DE680 /* ConfigurationPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +53,7 @@
 		3A1E465C1ED78CF000FB82BB /* ContactPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactPresenter.swift; sourceTree = "<group>"; };
 		3A1E465F1ED78E1700FB82BB /* ContactViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewProtocol.swift; sourceTree = "<group>"; };
 		3A2030F81ECC96B9004A8F7D /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		3A2053EA1EF35C020044C523 /* CivicImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CivicImageCache.swift; sourceTree = "<group>"; };
 		3A247DBB1ED649DB00E5C4D0 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		3A41EF961ECE50EE00019609 /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		3A5CDA3B1EC3C52700E14EAB /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
@@ -76,7 +77,6 @@
 		3AD584741ED33757009D4A0C /* SampleJSON.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleJSON.txt; sourceTree = "<group>"; };
 		3AD584761ED3386C009D4A0C /* AddressTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressTest.swift; sourceTree = "<group>"; };
 		3AE035F51EDCFB2C007DE680 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
-		3AE035F91EDFAC4C007DE680 /* ConfigurationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +180,7 @@
 				3A5CDA3F1EC3C97100E14EAB /* Representative.swift */,
 				3A41EF961ECE50EE00019609 /* Address.swift */,
 				3A247DBB1ED649DB00E5C4D0 /* UIViewExtension.swift */,
+				3A2053EA1EF35C020044C523 /* CivicImageCache.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -293,7 +294,6 @@
 			isa = PBXGroup;
 			children = (
 				3AE035F81EDFAC2C007DE680 /* View */,
-				3AE035FB1EDFAC52007DE680 /* Presenter */,
 			);
 			name = "Configuration Scene";
 			sourceTree = "<group>";
@@ -304,14 +304,6 @@
 				3AE035F51EDCFB2C007DE680 /* ConfigurationViewController.swift */,
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		3AE035FB1EDFAC52007DE680 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				3AE035F91EDFAC4C007DE680 /* ConfigurationPresenter.swift */,
-			);
-			name = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -452,7 +444,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A5CDA401EC3C97100E14EAB /* Representative.swift in Sources */,
-				3AE035FA1EDFAC4C007DE680 /* ConfigurationPresenter.swift in Sources */,
 				3A1E465D1ED78CF000FB82BB /* ContactPresenter.swift in Sources */,
 				3A9BE0911EC11E770048E973 /* MainPresenter.swift in Sources */,
 				3A247DBC1ED649DB00E5C4D0 /* UIViewExtension.swift in Sources */,
@@ -464,6 +455,7 @@
 				3A1E46601ED78E1700FB82BB /* ContactViewProtocol.swift in Sources */,
 				3A85FF3B1EC3B27300741395 /* MainViewProtocol.swift in Sources */,
 				3AE035F61EDCFB2C007DE680 /* ConfigurationViewController.swift in Sources */,
+				3A2053EB1EF35C020044C523 /* CivicImageCache.swift in Sources */,
 				3A41EF971ECE50EE00019609 /* Address.swift in Sources */,
 				3A9BE0941EC1295B0048E973 /* MainViewController.swift in Sources */,
 			);

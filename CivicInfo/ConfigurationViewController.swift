@@ -9,15 +9,11 @@
 import UIKit
 
 class ConfigurationViewController: UIViewController {
-
-    fileprivate var presenter = ConfigurationPresenter()
     
     @IBOutlet weak var zipCodeField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        presenter.attachView(view: self)
         
         self.blurBackground()
         
@@ -27,7 +23,7 @@ class ConfigurationViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let mainScene = segue.destination as? MainViewController {
             if zipCodeField.text != nil {
-                mainScene.zipCode = zipCodeField.text
+                mainScene.presenter.zipCode = zipCodeField.text
             }
         }
     }
@@ -35,8 +31,7 @@ class ConfigurationViewController: UIViewController {
 
 extension ConfigurationViewController {
     
-    func hideKeyboardOnTap()
-    {
+    func hideKeyboardOnTap() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(
             target: self,
             action: #selector(self.dismissKeyboard))
@@ -44,13 +39,12 @@ extension ConfigurationViewController {
         view.addGestureRecognizer(tap)
     }
     
-    func dismissKeyboard()
-    {
+    func dismissKeyboard() {
         view.endEditing(true)
     }
 }
 
-extension ConfigurationViewController: ConfigurationProtocol {
+extension ConfigurationViewController {
     
     func blurBackground() {
         // MARK: - Blur & Vibrancy

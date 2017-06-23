@@ -10,46 +10,32 @@ import UIKit
 
 class MainViewController: UIViewController
 {
-    fileprivate var presenter = MainPresenter()
-    
-    public var zipCode: String? {
-        didSet {
-            print("zipCode: \(zipCode!)")
-        }
-    }
+     public var presenter = MainPresenter()
 
     @IBOutlet weak var tableView: UITableView!
-    
-    var representatives = [Representative]() {
-        didSet { self.reload() }
-    }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
+        tableView.delegate = self
+        tableView.dataSource = self as UITableViewDataSource
+        
+        //Todo: Move to super class
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Avenir-Black", size: 20)!]
 
         
         presenter.attachView(view: self)
         
-        //Testing        
         presenter.updateLocation()
-        
-        tableView.delegate = self
-        tableView.dataSource = self as UITableViewDataSource
     }
     
     override func didReceiveMemoryWarning() {
-        //mainPresenter.flushCache()
+        presenter.flushCache()
     }
     
     @IBAction func unwindToMain(segue:UIStoryboardSegue) {
-        if let zip = zipCode {
-            let address: Address = Address(zipCode: zip)
-            
-            presenter.address = address
-        }
+        //presenter.zipCode has been set
     }
 
 }
@@ -62,7 +48,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return representatives.count
+        return presenter.representatives.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -71,10 +57,52 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource
         
         let cell: MainTableViewCell = tableView.dequeueReusableCell(withIdentifier: reuseId)! as! MainTableViewCell
 
-        if (representatives.count != 0) {
-            let index: Int = indexPath.row
+        if (presenter.representatives.count != 0) {
             
-            cell.representative = representatives[index]
+            let index: Int = indexPath.row
+            cell.representative = presenter.representatives[index]
+            
+            if presenter.representatives[index].imageURL != nil {
+                
+                let url = presenter.representatives[index].imageURL!
+                
+                //Create a key for caching downloaded image
+                let key: NSString = NSString(string: url.path)
+                
+                print(key)
+                
+                //Check Cache for image
+                if (presenter.imageCache.object(forKey: key) != nil) {
+                    cell.photoView?.image = presenter.imageCache.object(forKey: key)
+                } else {
+                    
+                    //cell.showStatusIndicator
+                    
+                    URLSession.shared.dataTask(with: url, completionHandler: {(data, repsonse, error) ->
+                        Void in
+                        
+                        if (error != nil) {
+                            print(error!)
+                            return
+                        }
+                        
+                        if let image = UIImage(data: data!) {
+                            
+                            self.presenter.imageCache.setObject(image, forKey: key)
+                            
+                            DispatchQueue.main.async { () -> Void in
+                                
+                                cell.photoView?.image = image
+                                
+                                cell.hideStatusIndicator()
+                            }
+                        }
+                    }).resume()
+                }
+            } else {
+                cell.photoView.image = UIImage(named: "icon")
+                cell.hideStatusIndicator()
+            }
         }
         
         return cell
@@ -91,7 +119,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource
             let destination = segue.destination as? ContactViewController,
             indexPath = tableView.indexPathForSelectedRow
             
-            var representative = self.representatives[(indexPath?.row)!]
+            var representative = presenter.representatives[(indexPath?.row)!]
             
             let selectedCell: MainTableViewCell = tableView.cellForRow(at: indexPath!) as! MainTableViewCell
             
@@ -107,20 +135,12 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource
 extension MainViewController: MainViewProtocol
 {
     func update(representatives: [Representative]) {
-        self.representatives = representatives
+        presenter.representatives = representatives
     }
     
     func reload() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
-    }
-    
-    func showLoadingIndicator() {
-        print("showLoadingIndicator()")
-    }
-    
-    func hideLoadingIndicator() {
-        print("hideLoadingIndicator()")
     }
 }

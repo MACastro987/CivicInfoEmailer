@@ -4,7 +4,7 @@
 
 "party": "Independent",
 
-"photoUrl": "https://static.comicvine.com/uploads/square_small/11/111746/4352062-marvin_the_martian.svg.jpg",
+"photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/MurrayBW.jpg/220px-MurrayBW.jpg",
 
 "email": ["castro.michael87@gmail.com"],
 
@@ -44,5 +44,54 @@
 
 "emails": [ "Pat.Petty@senate.ks.gov" ]
 
+},
+
+{
+"name": "Triple H",
+
+"party": "Democratic",
+
+"photoUrl": "http://www.bhmpics.com/thumbs/wwe_wrestler_triple_h_2-t2.jpg",
+
+"phones": [ "(785) 296-7375" ],
+
+"emails": [ "TripleH@senate.ks.gov" ]
+
+},
+
+{
+"name": "Sample Missing Image",
+
+"party": "Anarchist",
+
+"phones": [ "(785) 296-7375" ],
+
+"emails": [ "Sample@senate.ks.gov" ]
+
+},
+
+{
+"name": "John Cena",
+
+"party": "Republican",
+
+"photoUrl": "https://cbssanfran.files.wordpress.com/2014/09/john_cena.jpg?w=625",
+
+"phones": [ "(785) 296-7375" ],
+
+"emails": [ "Cena@senate.ks.gov" ]
+
+},
+
+{
+"name": "Second Sample Missing Image",
+
+"party": "Anarchist",
+
+"phones": [ "(785) 296-7375" ],
+
+"emails": [ "Sample2@senate.ks.gov" ]
+
 }
+
 ]}

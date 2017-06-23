@@ -9,8 +9,6 @@
 import Foundation
 
 protocol MainViewProtocol {
-    func showLoadingIndicator()
-    func hideLoadingIndicator()
     func update(representatives: [Representative])
     func reload()
 }
