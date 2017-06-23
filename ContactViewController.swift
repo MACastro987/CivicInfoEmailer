@@ -73,14 +73,12 @@ class ContactViewController: UITableViewController {
 }
 
 extension ContactViewController: ContactViewProtocol {
-    
     func call(number: String) {
         presenter.call(number: number)
     }
 }
 
 extension ContactViewController: MFMailComposeViewControllerDelegate {
-    
     func email(address: String) {
         
         let composeViewController = MFMailComposeViewController()
@@ -98,3 +96,5 @@ extension ContactViewController: MFMailComposeViewControllerDelegate {
         controller.dismiss(animated: true, completion: nil)
     }
 }
+
+
